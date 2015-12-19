@@ -1,0 +1,268 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Programming/Coding Assignment
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Ted Pavlic (http://www.tedpavlic.com)
+%
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing assignment content.
+%
+% This template uses a Python script as an example snippet of code, most other
+% languages are also usable. Configure them in the "CODE INCLUSION 
+% CONFIGURATION" section.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage[usenames,dvipsnames]{color} % Required for custom colors
+\usepackage{graphicx} % Required to insert images
+\usepackage{listings} % Required for insertion of code
+\usepackage{courier} % Required for the courier font
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{algorithm}
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.3} % Line spacing
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName} % Top left header
+\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle} % Top center head
+\rhead{\firstxmark} % Top right header
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\rfoot{Page\ \thepage\ of\ \protect\pageref{LastPage}} % Bottom right footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+
+
+
+%----------------------------------------------------------------------------------------
+%   CODE INCLUSION CONFIGURATION
+%----------------------------------------------------------------------------------------
+
+\definecolor{MyDarkGreen}{rgb}{0.0,0.4,0.0} % This is the color used for comments
+\lstloadlanguages{Python} % Load Perl syntax for listings, for a list of other languages supported see: ftp://ftp.tex.ac.uk/tex-archive/macros/latex/contrib/listings/listings.pdf
+\lstset{language=Python, % Use Perl in this example
+        %frame=single, % Single frame around code
+        basicstyle=\small\ttfamily, % Use small true type font
+        keywordstyle=[1]\color{Blue}\bf, % Perl functions bold and blue
+        keywordstyle=[2]\color{Purple}, % Perl function arguments purple
+        keywordstyle=[3]\color{Blue}\underbar, % Custom functions underlined and blue
+        identifierstyle=, % Nothing special about identifiers                                         
+        commentstyle=\usefont{T1}{pcr}{m}{sl}\color{MyDarkGreen}\small, % Comments small dark green courier font
+        stringstyle=\color{Purple}, % Strings are purple
+        showstringspaces=false, % Don't put marks in string spaces
+        tabsize=3, % 5 spaces per tab
+        %
+        % Put standard Perl functions not included in the default language here
+        morekeywords={rand},
+        %
+        % Put Perl function parameters here
+        morekeywords=[2]{on, off, interp},
+        %
+        % Put user defined functions here
+        morekeywords=[3]{test},
+        %
+        morecomment=[l][\color{Blue}]{...}, % Line continuation (...) like blue comment
+        numbers=left, % Line numbers on left
+        firstnumber=1, % Line numbers start with line 1
+        numberstyle=\tiny\color{Blue}, % Line numbers are blue and small
+        stepnumber=5 % Line numbers go in steps of 5
+}
+
+% Creates a new command to include a python script, the first parameter is the filename of the script (without .py), the second parameter is the caption
+\newcommand{\pythonscript}[2]{
+\begin{itemize}
+\item[]\lstinputlisting[caption=#2,label=#1]{#1.py}
+\end{itemize}
+}
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CLASS SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\hmwkTitle}{Assignment\ \#1} % Assignment title
+\newcommand{\hmwkDueDate}{Thursday,\ Oct \ 8,\ 2015} % Due date
+\newcommand{\hmwkClass}{CS091M4041H\ 101} % Course/class
+\newcommand{\hmwkClassTime}{10:30am} % Class/lecture time
+\newcommand{\hmwkClassInstructor}{Dongbo Bu} % Teacher/lecturer
+\newcommand{\hmwkAuthorName}{cwlseu} % Your name
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{
+\vspace{2in}
+\textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+\normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
+\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+\vspace{3in}
+}
+
+\author{\textbf{\hmwkAuthorName}\\\textbf{\hmwkAuthorStuID}}
+\date{} % Insert date here if you want it to appear below your name
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle
+\newpage
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\setcounter{tocdepth}{1} % Uncomment this line if you don't want subsections listed in the ToC
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+% To have just one problem per page, simply put a \clearpage after each problem
+\section{Divide and Conquer-1}
+    You are interested in analyzing some hard-to-obtain data from two separate databases. Each
+    database contains $n$  numerical values, so there are $2n$  values total and you may assume that no
+    two values are the same. You’d like to determine the median of this set of $2n$ values, which we
+    will define here to be the $n^{th}$ smallest value.\\
+    However, the only way you can access these values is through queries to the databases. In
+    a single query, you can specify a value k to one of the two databases, and the chosen database
+    will return the $k^{th}$ smallest value that it contains. Since queries are expensive, you would liketo compute the median using as few queries as possible. \\
+    Give an algorithm that finds the median value using at most $O(logn)$ queries.
+    \subsection{Algorithm}
+    Input two arrays: $An$ and $Bn$. (each array contains $n$ different value and is in \emph{ascending} order).The system will return result is the $k^{th}$ smallest value that it contains.
+    So we get the median of two arrays: $A[\frac{n}{2}]$ and $B[\frac{n}{2}]$. Before the $A[\frac{n}{2}]$ value, there are only $\frac{n}{2}-1$ values, before the $B[\frac{n}{2}]$ value, there are only $\frac{n}{2}-1$ values. (\emph{Note}: $A[\frac{n}{2}] \neq B[\frac{n}{2}]$  because all $2n$ values are different). \\
+    So we only have two conditions:
+    \begin{itemize}
+    \item if $A[\frac{n}{2}] < B[\frac{n}{2}]$, The two arrays’ median value must be in the interval $A[\frac{n}{2}+1]$ to $A[n]$ and in the interval B[1] to $B[\frac{n}{2}]$. 
+    \item if $A[\frac{n}{2}] > B[\frac{n}{2}]$ ,the two arrays’ median value must be in the interval $A[0]$ to $A[\frac{n}{2}]$ and in the interval $B[\frac{n}{2}+1]$ to $B[n]$.
+    \end{itemize}
+    
+    \pythonscript{getmedian}{Get the median value for two ordered array}
+    \subsection{Subproblem Graph}
+        \begin{center}
+            \includegraphics[width=0.75\columnwidth]{median} % Example image
+        \end{center}
+    \subsection{Correctness}
+    The algorithm get the median of two arrays: $A[\frac{n}{2}]$ and $B[\frac{n}{2}]$ which
+     is in ascending order. Before the $A[\frac{n}{2}]$ value, there are only  $\frac{n}{2}-1$ values, before the $B[\frac{n}{2}]$ value, there are only $\frac{n}{2}-1$ values. 
+     (\emph{Note}: $A[\frac{n}{2}]\neqB[\frac{n}{2}]$  because all $2n$ values are different). if $A[\frac{n}{2}] < B[\frac{n}{2}]$, before the $B[\frac{n}{2}]$ value, there must be at least $\frac{n}{2}-1 + \frac{n}{2}-1+1 = n-1$ values, which is $\frac{n}{2}-1$ before $A[\frac{n}{2}]$ and $\frac{n}{2}-1$ before $B[\frac{n}{2}]$ and  1  stand for $A[\frac{n}{2}]$  itself. While before the $A[\frac{n}{2}]$ value, there must be at most $\frac{n}{2}-1+\frac{n}{2}-1=n-2$. So the two arrays’ median value must be in the interval $A[\frac{n}{2}+1]$ to $A[n]$ and in the interval $B[0]$ to $B[\frac{n}{2}]$. We find the median value from  subarray and we can divide this problem into one small problem.\\At last, Subarray A and B only have one value, we get the small one which is the result. 
+    \subsection{Time Complexity}
+    Now, We will prove this algorithm is $O(log n)$ time.  
+    In algorithm: we can have $$T(n)=T(\frac{n}{2})+C$$ and when $n>1$ $$T(1)=C$$ So we get $$T(n)=clog n$$
+    Then this algorithm is $O(log n)$ time.
+\section{Divide and Conquer-3}
+    Recall the problem of finding the number of inversions. As in the course, we are given a sequence of n numbers $a_1$,..., $a_n$, which we assume are all distinct, and we difine an inversion to be a pair $i < j$ such that $a_i > a_j$.                                                                               \\
+    We motivated the problem of counting inversions as a good measure of how different two orderings are. However, one might feel that this measure is too sensitive. Let’s call a pair a significant inversion if $i < j$ and $a_i > 3a_j$.                                                                                \\
+    Given an $O(n log n)$ algorithm to count the number of significant inversions between two orderings.  \\
+    \subsection{Algorithm}
+    \pythonscript{significant_inversion}{Get a number list significant inversion}
+    \subsection{Subproblem Graph}
+        \begin{center}
+            \includegraphics[width=0.75\columnwidth]{inversions} % Example image
+        \end{center}
+    \subsection{Correctness}
+    Given a sequence of n numbers , we use a array $L[1..n]$ which contains this $n$ numbers. 
+    We can use Sort\_And\_Count function in the normal InversionCount. Assume we divide $L[1..n]$ into two subarray $A[0..\frac{n}{2}]$ for $L[0..\frac{n}{2}]$  and $B[0..\frac{n}{2}]$ for $A[\frac{n}{2}+1..n]$,and we have already sort the two arrays A and B and computed the inversions’ numbers.
+     Now what we only should do is to get the $A[i]$ and $B[j]$ (i and j is $1..\frac{n}{2}$) and look whether this two number is inversed and at the same time we should merge this two sorted array. 
+    Now let us describe this problem: we already get two sorted arrays $A[0..\frac{n}{2}]$ and 
+    $B[0..\frac{n}{2}]$, we set three indexes i and $j_1$ and $j_2$ (i and $j_2$ is to iterate A and B, $j_1$ is to $B[j_1..j_2 - 1] < A[i]$  
+    in other word, it means the current \emph{ith} value is bigger than $j_1$ to $j_2 - 1$’s all values.) 
+    When we iterate i’th number in A and j’th number in B, we have two conditions(because all numbers are distinct, so $A[i]\neq B[j_2]$):
+    \begin{itemize}
+        \item if $A[i] < B[j_2]$. We look whether $A[i]$is treble than $B[j_1]$ , 
+        if $A[i] > 3*B[j_1]$ then we add InverseCount( InverseCount stand for the current number of inversions) with the number of A remaining arrays. At the same time, we add $j_1$ to look the next element in B. 
+        Else, we insent $A[i]$ value into new sorted array and add i to look the next element in A.   
+        \item if $A[i]>B[j_2]$. We insert $B[j_2]$ value into new new sorted array and add $j_2$ to look the next element in B.
+    \end{itemize}
+    \subsection{Time Complexity}
+    Now, We will prove this algorithm is $O(n log n)$ time.  
+    In algorithm: we can have $$T(n)=2T(\frac{n}{2})+ O(n)$$ and when $n>1$ $$T(1)=C$$ So we get $$T(n)=cn log n$$ 
+    Then this algorithm is $O(n log n)$ time.
+
+\section{Divide and Conquer-6}
+Given a convex polygon with n vertices, we can divide it into several separated pieces, such that every piece is a triangle. When n = 4, there are two different ways to divide the polygon; When n = 5, there are five different ways.
+Give an algorithm that decides how many ways we can divide a convex polygon with n vertices into triangles.
+    \subsection{Algorithm}
+        \pythonscript{DivideConvexPolygon}{Divide a convex polygon with n vertices into triangles}
+    \subsection{Reduction Graph}
+        \begin{center}
+            \includegraphics[width=0.75\columnwidth]{reduce2}
+        \end{center}
+    \subsection{Correctness}
+    The convex polygon with n vertices. We give a sequance number $V_1..V_i..V_n$. As we all know, $V_1$, $V_i$, $V_n$ could consititude a triangle $S$. And the convex polygon have been separated to three parts as following figure show: 
+    \begin{center}
+    \includegraphics[width=0.25\columnwidth]{polygon}
+    \end{center}
+    We can see that, the number of divide the convex polygon with n vertices into triangles is  $$f_i(n)=f(i)f(n+1-i)$$ We find the convex polygon divide problem could be divided into two small problem. \\
+    At last, Subproblem is a triangles, then the backtrack the problem will get the result.Finally, the totel number is the sum of all the i value such as: $$f(n)=\sum_{i=2}^{n-1}f(i)f(n+1-i)$$
+    \subsection{Time Complexity}
+    From the Reduction graph, We can see following $$T(n) = \sum_{i=2}^{n-1}T(i)T(n+1-i)$$ The time complexity is $O(2^n)$.The algorithm will be useless for real world testing. If we save the interval value of subproblem, we should use n external space and the $$T(n) = \sum_{i=2}^{n-1}T(i)$$ Then this algorithm is $O(n)$ time.
+
+\section{Divide and Conquer-8}
+    Implement the algorithm for the closest pair problem in your favourite language.\\
+    \emph{INPUT}: Given n points in a plane.\\
+    \emph{OUTPUT}: the pair with the least Euclidean distance.
+    \subsection{Code}
+        \pythonscript{nearestpair}{algorithm for the closest pair problem in your favourite language}
+\section{Divide and Conquer-9}
+    Implement the Strassen algorithm algorithm for MatrixMultiplication problem in your favourite
+    language, and compare the performance with grade-school method.
+    \subsection{Code}
+        \pythonscript{strassen}{algorithm for the closest pair problem}
+        \emph{There are an Input Case input data file name input.txt} \\
+        5\\
+        1 2 3 4 5 \\
+        1 2 3 4 5 \\
+        1 2 3 4 5 \\
+        1 2 3 4 5 \\
+        1 2 3 4 5 \\
+        5\\
+        1 2 3 4 5 \\
+        1 2 3 4 5 \\
+        1 2 3 4 5 \\
+        1 2 3 4 5 \\
+        1 2 3 4 5 
+    \subsection{Performance Compare}
+    I use test matrix dimension 5, 20, 60, 160, 320. Every method running 10 time and get the average time as $Table 1$ shows:
+      \begin{table}[tbp]     
+            \centering 
+                \begin{tabular}{ccc}  
+                \hline
+                    Matrix Dimension & Grade-school & Strassen  \\ \hline  % \hline 在此行下面画一横线
+                    5          & 0.000045     & 0.000064  \\
+                    20         & 0.002432     & 0.001844  \\
+                    60         & 0.045801     & 0.044032  \\
+                    160        & 0.890432     & 0.740964  \\
+                    320        & 7.210309     & 5.449172  \\ \hline
+                \end{tabular}
+            \caption{Average running time with different method.}
+        \end{table}
+    From test result, I find that if the matrix is smaller, the grade-school method is better than Strassen. So, When I implement the Strassen, I use a commend to decide use grade-school method or divide the matrix to small matrix. 
+%----------------------------------------------------------------------------------------
+\end{document}

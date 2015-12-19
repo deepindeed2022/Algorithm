@@ -1,0 +1,25 @@
+# short example
+# Usage: $ glpsol --math filename.math
+# glpsol is a tool in GLPK, an open-source package http://www.gnu.org/s/glpk/
+# d = [100  450  1000 1500]
+
+var s1 >=0;
+var s2 >=0;
+var s3 >=0;
+var D;
+
+minimize obj: D;
+s.t. c1: 100 - 100 <= s1 <= 450 + 100;
+s.t. c2: 450 - 100 <= s2 <= 1000 + 100;
+s.t. c3: 1000 - 100 <= s3 <= 1500 + 100;
+s.t. c4: s2 -s1 <= D;
+s.t. c5: s3 -s2 <= D;
+
+solve;
+
+display c1, c2, c3;
+display D;
+display s1, s2, s3;
+end;
+
+

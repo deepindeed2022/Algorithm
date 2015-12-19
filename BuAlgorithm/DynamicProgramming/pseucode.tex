@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\begin{document}
+\section{Problem}
+\begin{algorithm}
+  \caption{Calculate $y = x^n$}
+  \label{alg1}
+  \begin{algorithmic}[1]
+  \REQUIRE $n \geq 0 \vee x \neq 0$
+  \ENSURE $y = x^n$
+  \STATE $y \gets 1$
+  \IF{$n < 0$}
+  	\STATE $X \gets 1 / x$
+  	\STATE $N \gets -n$
+  \ELSE
+  	\STATE $X \gets x$
+  	\STATE $N \gets n$
+  \ENDIF
+  \WHILE{$N \neq 0$}
+  	\IF{$N$ is even}
+  		\STATE $X \gets X \times X$
+  		\STATE $N \gets N / 2$
+  	\ELSE[$N$ is odd]
+  		\STATE $y \gets y \times X$
+  		\STATE $N \gets N - 1$
+  		\IF{$N$ is 2}
+  			\State $Hello$
+  		\ELSE
+  			\State Print hello
+  		\ENDIF
+  		\FOR{$i \gets 1,n$}
+  			\State $sum \gets sum+i$
+  		\ENDFOR
+  	\ENDIF
+  \ENDWHILE
+  \end{algorithmic}
+\end{algorithm}
+\section{Problem}
+There will test reference [\ref{alg1}], if you want get the reference number, compile the \
+tex file 2 time at least.
+\end{document}

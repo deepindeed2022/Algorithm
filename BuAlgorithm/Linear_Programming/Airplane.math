@@ -1,0 +1,27 @@
+# short example
+# Usage: $ glpsol --math filename.math
+# glpsol is a tool in GLPK, an open-source package http://www.gnu.org/s/glpk/
+# 7:00 - 8:00
+# 8:10 - 8:40
+# 8:50 - 9:50
+
+var x1 >=0 ;
+var x2 >=0;
+var x3 >=0;
+var T;
+
+maximize obj: T;
+s.t. c1: 480 >= x1 >= 420;
+s.t. c2: 520 >= x2 >= 490;
+s.t. c3: 590 >= x3 >= 530;
+s.t. c4: x2 -x1 >= T;
+s.t. c5: x3 -x2 >= T;
+
+solve;
+
+display c1, c2, c3;
+display T;
+display x1, x2, x3;
+end;
+
+
