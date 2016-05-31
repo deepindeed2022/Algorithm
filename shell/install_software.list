@@ -1,0 +1,4 @@
+python-scipy dependency=> python-dev 
+python-numpy
+python-matplotlib
+

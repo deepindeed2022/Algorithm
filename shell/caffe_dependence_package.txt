@@ -1,0 +1,28 @@
+# basic libs
+build-essential
+python-dev
+git
+vim-gnome
+python-pip
+
+# caffe dependencies libs
+libprotobuf-dev 
+libleveldb-dev 
+libsnappy-dev 
+libopencv-dev 
+libboost-all-dev 
+libhdf5-serial-dev 
+libgflags-dev 
+libgoogle-glog-dev 
+liblmdb-dev 
+protobuf-compiler
+libatlas-base-dev
+libboost-all-dev
+libgflags-dev 
+libgoogle-glog-dev 
+liblmdb-dev
+
+# python scilibs apt-get install
+# python-scipy dependency=> python-dev 
+# python-numpy
+# python-matplotlib
