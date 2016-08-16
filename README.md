@@ -23,3 +23,17 @@
 
 ## 多敲胜于多想，多用胜于多读
 毕竟算法要用于实践，我们的算法再怎么棒，不能实现也是空谈罢了。算法是个实战主义者。
+
+## C++ Practise
+C++ is a great program language. But it's difficult for
+me to learn deeply. So more practise should be do.
+
+### Boost libary
+Boost libary have some great idea for programmer to learn.
+
+### OpenCV
+Using opencv, digital image process API.
+Feature extraction, image transform
+
+### Internet basic
+* Socket programming
