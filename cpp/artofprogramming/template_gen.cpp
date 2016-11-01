@@ -45,7 +45,7 @@ int main(int argc, char const *argv[])
 	  	fs << "/**\n"
 		   << "* @author: Clython \n"
 		   << "* @description: The file description.\n";
-		fs <<"*@Create Date:";
+		fs <<"* @create Date:";
 		fs << today() << "\n**/\n";
 		fs <<"#include <iostream>"<<std::endl;
 		fs <<"#include <assert.h>"<<std::endl;
