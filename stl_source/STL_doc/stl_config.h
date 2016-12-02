@@ -399,7 +399,6 @@
 #   define __STD_QUALIFIER
 # endif
 
-// C++ Builder Define
 # if defined(__BORLANDC__)
 #     define __STL_NO_BAD_ALLOC
 #     define __STL_NO_DRAND48

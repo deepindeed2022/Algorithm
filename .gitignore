@@ -16,3 +16,4 @@
 *.vcxproj.*
 *.dgml
 
+/stl_source/stl
