@@ -1,3 +1,5 @@
+// 利用二分法进行查找整数的平方根的下界
+// 主要考察边界和二分查找
 #include <iostream>
 using namespace std;
 int mySqrt(int x)
