@@ -78,6 +78,7 @@ int main(int argc, char const *argv[])
 {
   const std::type_info& info = typeid(__type_traits<short>::is_POD_type());
   std::cout << info.name() << std::endl;
+  // 没有定义响应的trait信息，应该为false
   const std::type_info& info2 = typeid(__type_traits<long long>::is_POD_type());
   std::cout << info2.name() << std::endl;
   return 0;
