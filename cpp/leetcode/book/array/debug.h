@@ -1,6 +1,9 @@
 #include <cassert>
 #include <cstdio>
 #include <cstdlib>
+#include <vector>
+#include <algorithm>
+#define RANDOM_MAX 20
 namespace TEST{
 
 #define ASSERT(p)                       \
@@ -25,7 +28,7 @@ void generate_sorted_ary(std::vector<int>& a, const size_t size)
 {
     // Generate test case data
     // srand(0);
-    std::vector<int> a(size, 0);
+    // std::vector<int> a(size, 0);
     for (int i = 0; i < size; ++i)
     {
         a[i] = rand() % RANDOM_MAX;

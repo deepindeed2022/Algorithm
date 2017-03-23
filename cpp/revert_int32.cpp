@@ -14,14 +14,14 @@ int revert_int(int _num)
 		bin2[counter++] = (num & 0x01== 0x01) ;
 		num >>= 1;
 	}
-	/*
+	
 	std::cout<<"THE "<< _num<< " COUNTER : " << counter << std::endl;
 	for (int i = 0; i < counter; ++i)
 	{
 		std::cout << bin2[i];
 	}
 	std::cout <<std::endl;
-	*/
+	
 	int result = bin2[0];
 	for(int i = 1; i < counter; ++i)
 	{

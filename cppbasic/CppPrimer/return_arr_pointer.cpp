@@ -8,7 +8,7 @@ void* func_new(const int size)
 	{
 		a[i] = 0;
 	}
-	printf("%d\n", &a);
+	//printf("%d\n", &a);
 	return (void*)a;
 }
 void* func_arr()
