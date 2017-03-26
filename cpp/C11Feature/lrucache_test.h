@@ -1,6 +1,5 @@
 #include "lrucache.h"
-#include <cmath>
-#include <cassert>
+#include "stdheader.h"
 void lru_test(int capacity = 16)
 {
 	LRUCache * caches = new LRUCache(capacity);
@@ -9,7 +8,7 @@ void lru_test(int capacity = 16)
 	int size = capacity*2;
 	for (int i = 0; i < size; i++)
 	{
-		tmp = pow<int>(i, 2);
+		tmp = pow(i, 2);
 		caches->set(i, tmp);
 		assert(caches->get(i) == tmp);
 	}

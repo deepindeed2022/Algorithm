@@ -49,14 +49,14 @@ def Cpair2(points):
 			cd_1, cd_2 = Cpair2(S1), Cpair2(S2)
 		dm = min(cd_1, cd_2)
 
-		P1,P2 =  sorted(get_dmrange_points(S1, m, dm), key = lambda x: x[1]) , \
+		P1, P2 =  sorted(get_dmrange_points(S1, m, dm), key = lambda x: x[1]) , \
 				sorted(get_dmrange_points(S2, m, dm), key = lambda x: x[1])
 
 		## There are some tip to promote performance by update dm immediately if find some smaller dm
 		euclidist = []
 		for point in P1:
-			Y = get_dmrange_points(P2, l = point[1], dm = dm, index = 1)
-			for point2 in Y:
+			#Y = get_dmrange_points(P2, l = point[1], dm = dm, index = 1)
+			for point2 in P2:
 				euclidist.append(get_euclidean_distance2(point,point2))
 		if euclidist:
 			return min(dm, min(euclidist))

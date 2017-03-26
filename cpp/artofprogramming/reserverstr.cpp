@@ -8,7 +8,7 @@ using namespace std;
 #define FUNC_PARAM char*, const int size, int start
 
 
-typedef void(*PF_RET_VOID)(FUNC_PARAMB);
+typedef void(*PF_RET_VOID)(FUNC_PARAM);
 
 // typedef int(*PF_RET_INT)(void);
 void haveIncludeStr_method1(char* s, const int size, int start)
