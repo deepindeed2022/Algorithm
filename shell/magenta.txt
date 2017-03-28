@@ -1,0 +1,1259 @@
+wenlong@ubuntu:~$ uname -a
+Linux ubuntu 4.4.0-34-generic #53-Ubuntu SMP Wed Jul 27 16:06:39 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+wenlong@ubuntu:~$ cd Repo/magenta/
+wenlong@ubuntu:~/Repo/magenta$ ls
+AUTHORS                  docs    LICENSE   prebuilt   scripts  third_party
+build-magenta-pc-x86-64  kernel  makefile  README.md  system
+wenlong@ubuntu:~/Repo/magenta$ ./scripts/run-magenta-x86-64 
+qemu-system-x86_64 -m 512 -nographic -smp 4 -machine q35 -kernel /home/wenlong/Repo/magenta/build-magenta-pc-x86-64/magenta.bin -cpu Haswell,+smap -append 
+warning: TCG doesn't support requested feature: CPUID.01H:EDX.vme [bit 1]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.fma [bit 12]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.pcid [bit 17]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.x2apic [bit 21]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.tsc-deadline [bit 24]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.xsave [bit 26]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.avx [bit 28]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.f16c [bit 29]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.rdrand [bit 30]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.fsgsbase [bit 0]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.hle [bit 4]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.avx2 [bit 5]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.erms [bit 9]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.invpcid [bit 10]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.rtm [bit 11]
+warning: TCG doesn't support requested feature: CPUID.0DH:EAX.xsaveopt [bit 0]
+warning: TCG doesn't support requested feature: CPUID.01H:EDX.vme [bit 1]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.fma [bit 12]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.pcid [bit 17]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.x2apic [bit 21]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.tsc-deadline [bit 24]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.xsave [bit 26]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.avx [bit 28]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.f16c [bit 29]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.rdrand [bit 30]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.fsgsbase [bit 0]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.hle [bit 4]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.avx2 [bit 5]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.erms [bit 9]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.invpcid [bit 10]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.rtm [bit 11]
+warning: TCG doesn't support requested feature: CPUID.0DH:EAX.xsaveopt [bit 0]
+warning: TCG doesn't support requested feature: CPUID.01H:EDX.vme [bit 1]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.fma [bit 12]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.pcid [bit 17]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.x2apic [bit 21]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.tsc-deadline [bit 24]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.xsave [bit 26]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.avx [bit 28]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.f16c [bit 29]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.rdrand [bit 30]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.fsgsbase [bit 0]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.hle [bit 4]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.avx2 [bit 5]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.erms [bit 9]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.invpcid [bit 10]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.rtm [bit 11]
+warning: TCG doesn't support requested feature: CPUID.0DH:EAX.xsaveopt [bit 0]
+warning: TCG doesn't support requested feature: CPUID.01H:EDX.vme [bit 1]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.fma [bit 12]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.pcid [bit 17]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.x2apic [bit 21]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.tsc-deadline [bit 24]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.xsave [bit 26]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.avx [bit 28]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.f16c [bit 29]
+warning: TCG doesn't support requested feature: CPUID.01H:ECX.rdrand [bit 30]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.fsgsbase [bit 0]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.hle [bit 4]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.avx2 [bit 5]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.erms [bit 9]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.invpcid [bit 10]
+warning: TCG doesn't support requested feature: CPUID.07H:EBX.rtm [bit 11]
+warning: TCG doesn't support requested feature: CPUID.0DH:EAX.xsaveopt [bit 0]
+
+welcome to lk/MP
+
+boot args 0x1 0xffffffff80524cbc 0x0 0x0
+INIT: cpu 0, calling hook 0xffffffff8012c8c0 (version) at level 0x3ffff, flags 0x1
+version:
+	arch:     X86
+	platform: PC
+	target:   PC_X86
+	project:  MAGENTA_PC_X86_64
+	buildid:  _LOCAL
+INIT: cpu 0, calling hook 0xffffffff8012f8e4 (vm_preheap) at level 0x3ffff, flags 0x1
+initializing heap
+INIT: cpu 0, calling hook 0xffffffff8012f928 (vm) at level 0x50000, flags 0x1
+INIT: cpu 0, calling hook 0xffffffff80100300 (acpi_tables) at level 0x50001, flags 0x1
+INIT: cpu 0, calling hook 0xffffffff80101ffc (display_memtype) at level 0x50001, flags 0x1
+INIT: cpu 0, calling hook 0xffffffff80100e18 (hpet) at level 0x50002, flags 0x1
+INIT: cpu 0, calling hook 0xffffffff80100f80 (apic) at level 0x50002, flags 0x1
+INIT: cpu 0, calling hook 0xffffffff801027bc (timer) at level 0x50003, flags 0x1
+calibrate_apic_timer:231: Calibrating APIC with HPET
+initializing mp
+initializing threads
+initializing timers
+INIT: cpu 0, calling hook 0xffffffff8011b918 (debuglog) at level 0x6ffff, flags 0x1
+creating bootstrap completion thread
+[00000.003] K top of bootstrap2()
+[00000.003] K INIT: cpu 0, calling hook 0xffffffff8013b3c0 (global_prng) at level 0x70000, flags 0x1
+[00000.004] K WARNING: System has no entropy source.  It is completely unsafe to use this system for any cryptographic applications.
+[00000.004] K INIT: cpu 0, calling hook 0xffffffff8014754c (magenta) at level 0x70000, flags 0x1
+[00000.005] K INIT: cpu 0, calling hook 0xffffffff80157878 (dpc) at level 0x70000, flags 0x1
+[00000.010] K Vendor: Intel
+[00000.010] K Features: fpu sse sse2 sse3 ssse3 sse4.1 sse4.2 mmx fxsr aesni smep smap syscall nx rdtscp 
+[00000.010] K initializing platform
+[00000.010] K INIT: cpu 0, calling hook 0xffffffff8011511c (pcie_early_init) at level 0x8ffff, flags 0x1
+[00000.011] K cpu topology:
+[00000.011] K 	0: apic id 0x0 package 0 core 0 smt 0 BSP
+[00000.012] K 	1: apic id 0x1 package 1 core 0 smt 0
+[00000.012] K 	2: apic id 0x2 package 2 core 0 smt 0
+[00000.012] K 	3: apic id 0x3 package 3 core 0 smt 0
+[00000.012] K Found 4 cpus
+[00000.012] K creating idle thread for cpu 1
+[00000.021] K creating idle thread for cpu 2
+[00000.022] K creating idle thread for cpu 3
+running final init tasks on cpu 1
+entering scheduler on cpu 1
+running final init tasks on cpu 2
+entering scheduler on cpu 2
+running final init tasks on cpu 3
+entering scheduler on cpu 3
+[00000.040] K initializing target
+[00000.040] K calling apps_init()
+[00000.040] K INIT: cpu 0, calling hook 0xffffffff8011d3c0 (ktrace) at level 0xaffff, flags 0x1
+[00000.088] K ktrace: buffer at 0xffffff90001c4000 (33554432 bytes)
+[00000.089] K INIT: cpu 0, calling hook 0xffffffff8012c89c (userboot) at level 0xaffff, flags 0x1
+[00000.089] K userboot: console init
+[00000.089] K userboot: bootfs          3833856 @ 0xffffffff80179000
+[00000.092] K userboot: userboot-rodata       0 @ [0x1000000,0x1001000)
+[00000.092] K userboot: userboot-code    0x1000 @ [0x1001000,0x1004000)
+[00000.092] K userboot: vdso-rodata           0 @ [0x1004000,0x1009000)
+[00000.092] K userboot: vdso-code        0x5000 @ [0x1009000,0x100a000)
+[00000.093] K userboot: entry point             @ 0x1001780
+[00000.100] U userboot: searching bootfs for "bin/devmgr"
+[00000.101] U userboot: bin/devmgr has PT_INTERP "lib/ld.so.1"
+[00000.102] U userboot: searching bootfs for "lib/ld.so.1"
+[00000.115] U userboot: bin/devmgr started.  userboot exiting.
+[00000.123] U Loaded at [0x10f0000,0x1105000): <application>
+[00000.123] U Loaded at [0x10aa000,0x10b0000): <vDSO> (libmagenta.so)
+[00000.123] U Loaded at [0x1000000,0x10aa000): libc.so
+[00000.125] U devmgr: main()
+[00000.125] U devmgr: init
+[00000.125] U devmgr: vfs init
+[00000.128] U devmgr: bootfs #0 contains 91 files
+[00000.131] U devmgr: launch /boot/bin/crashlogger (crashlogger)
+[00000.147] U devmgr: shell startup
+[00000.147] U devmgr: launch /boot/bin/netsvc (netsvc)
+[00000.148] U devmgr: launch: devhost:root /boot/bin/devhost root
+[00000.163] U crashlogger service ready
+[00000.168] U devmgr: launch /boot/bin/mxsh (mxsh:autorun)
+[00000.182] U devmgr: root ctx 0x10000006740
+[00000.193] U netsvc: main()
+[00000.208] U devmgr: launch acpisvc
+[00000.212] U cannot open '/boot/autorun'
+[00000.381] U Initialized ACPI
+[00000.457] U kpci_init()
+[00000.461] U devmgr: launch: devhost:pci#0:8086:29c0 /boot/bin/devhost pci=0
+[00000.476] U devmgr: launch: devhost:pci#1:1234:1111 /boot/bin/devhost pci=1
+[00000.505] U devmgr: launch: devhost:pci#2:8086:100e /boot/bin/devhost pci=2
+[00000.531] U initialized vc on display bochs_vbe, width=1024 height=768 stride=1024 format=1
+[00000.552] U devmgr: launch: devhost:pci#3:8086:2918 /boot/bin/devhost pci=3
+[00000.554] U devmgr: launch /boot/bin/mxsh (mxsh:vc)
+[00000.582] U eth: using legacy irq mode
+[00000.584] U eth: mac: 52:54:00:12:34:56
+[00000.592] U eth: iomem @0x1159000 (phys 36f3000)
+[00000.596] U netifc: ? /dev/class/ethernet/000
+[00000.601] U devmgr: launch /boot/bin/mxsh (mxsh:vc)
+[00000.602] U macaddr: 52:54:00:12:34:56
+[00000.602] U ip6addr: fe80::5054:ff:fe12:3456
+[00000.602] U snmaddr: ff02::1:ff12:3456
+[00000.606] U netsvc: start
+[00000.616] U devmgr: launch: devhost:pci#4:8086:2922 /boot/bin/devhost pci=4
+[00000.638] U devmgr: launch /boot/bin/mxsh (mxsh:vc)
+[00000.682] U devmgr: launch: devhost:pci#5:8086:2930 /boot/bin/devhost pci=5
+[00000.726] U i8042 device 0xab 0x41rpc-device: stale ios 0x11235a0
+[00000.727] U i8042 device 0xab 0x41
+[00000.728] U vc: new input device /dev/class/input/000
+[00000.729] U devmgr: launch /boot/bin/mxsh (mxsh:console)
+[00000.730] U vc: new input device /dev/class/input/001
+
+MXCONSOLE...
+> [00002.070] U i8042 device 0x00
+
+> help
+cd        change directory
+cp        copy a file
+dump      display a file in hexadecimal
+echo      print its arguments
+help      list built-in shell commands
+dm        send command to device manager
+list      display a text file with line numbers
+ls        list directory contents
+mkdir     create a directory
+mv        rename a file or directory
+rm        delete a file
+runtests  run all test programs
+msleep    pause for milliseconds
+<program> run <program>
+`command  send command to kernel console
+
+> runtests
+
+------------------------------------------------
+RUNNING TEST: bad-syscall-test
+
+
+CASE bad_syscall_tests                                  [STARTED] 
+    bad_syscall_test                                    [RUNNING] [PASSED] 
+CASE bad_syscall_tests                                  [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: bad-syscall-test passed
+
+------------------------------------------------
+RUNNING TEST: c11-condvar-test
+
+
+CASE cnd_tests                                          [STARTED] 
+    cnd_test                                            [RUNNING] [PASSED] 
+CASE cnd_tests                                          [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: c11-condvar-test passed
+
+------------------------------------------------
+RUNNING TEST: c11-mutex-test
+
+
+CASE mtx_tests                                          [STARTED] 
+    test_initializer                                    [RUNNING] [PASSED] 
+    test_mutexes                                        [RUNNING] [PASSED] 
+    test_try_mutexes                                    [RUNNING] [PASSED] 
+    test_static_initializer                             [RUNNING] [PASSED] 
+CASE mtx_tests                                          [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: c11-mutex-test passed
+
+------------------------------------------------
+RUNNING TEST: c11-thread-test
+
+
+CASE c11_thread_tests                                   [STARTED] 
+    c11_thread_test                                     [RUNNING] [PASSED] 
+CASE c11_thread_tests                                   [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: c11-thread-test passed
+
+------------------------------------------------
+RUNNING TEST: call_once-test
+
+
+CASE call_once_tests                                    [STARTED] 
+    call_once_main_thread_test                          [RUNNING] [PASSED] 
+    call_once_two_thread_test                           [RUNNING] [PASSED] 
+CASE call_once_tests                                    [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: call_once-test passed
+
+------------------------------------------------
+RUNNING TEST: cleanup-test
+
+
+CASE cleanup_tests                                      [STARTED] 
+    cleanup_test                                        [RUNNING] [PASSED] 
+CASE cleanup_tests                                      [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: cleanup-test passed
+
+------------------------------------------------
+RUNNING TEST: cprng-test
+
+
+CASE cprng_tests                                        [STARTED] 
+    cprng_test_draw_buf_too_large                       [RUNNING] [PASSED] 
+    cprng_test_draw_bad_buf                             [RUNNING] [PASSED] 
+    cprng_test_draw_success                             [RUNNING] [PASSED] 
+    cprng_test_add_entropy_buf_too_large                [RUNNING] [PASSED] 
+    cprng_test_add_entropy_bad_buf                      [RUNNING] [PASSED] 
+CASE cprng_tests                                        [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: cprng-test passed
+
+------------------------------------------------
+RUNNING TEST: ctor-test
+
+
+CASE ctors                                              [STARTED] 
+    check_ctor                                          [RUNNING] [PASSED] 
+    check_initializer                                   [RUNNING] [PASSED] 
+CASE ctors                                              [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: ctor-test passed
+
+------------------------------------------------
+RUNNING TEST: data-pipe-test
+
+
+CASE data_pipe_tests                                    [STARTED] 
+    create_destroy_test                                 [RUNNING] [PASSED] 
+    simple_read_write                                   [RUNNING] [PASSED] 
+    loop_write_full                                     [RUNNING] [PASSED] 
+    write_read                                          [RUNNING] [PASSED] 
+    begin_write_read                                    [RUNNING] [PASSED] 
+    loop_write_read                                     [RUNNING] [PASSED] 
+    loop_begin_write_read                               [RUNNING] [PASSED] 
+    consumer_signals_when_producer_closed               [RUNNING] [PASSED] 
+    nontrivial_element_size                             [RUNNING] [PASSED] 
+    element_size_errors                                 [RUNNING] [PASSED] 
+    write_all_or_none                                   [RUNNING] [PASSED] 
+    write_invalid_flags                                 [RUNNING] [PASSED] 
+    write_wrap                                          [RUNNING] [PASSED] 
+    write_threshold                                     [RUNNING] [PASSED] 
+    write_threshold_set_invalid                         [RUNNING] [PASSED] 
+    write_two_phase_signals                             [RUNNING] [PASSED] 
+    query_peek_discard                                  [RUNNING] [PASSED] 
+    read_all_or_none                                    [RUNNING] [PASSED] 
+    read_invalid_flags                                  [RUNNING] [PASSED] 
+    read_wrap                                           [RUNNING] [PASSED] 
+    read_threshold                                      [RUNNING] [PASSED] 
+    read_threshold_set_invalid                          [RUNNING] [PASSED] 
+    read_two_phase_signals                              [RUNNING] [PASSED] 
+CASE data_pipe_tests                                    [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: data-pipe-test passed
+
+------------------------------------------------
+RUNNING TEST: ddk-completion-test
+
+
+CASE completion_tests                                   [STARTED] 
+    test_initializer                                    [RUNNING] [PASSED] 
+    test_completions                                    [RUNNING] [PASSED] 
+    test_timeout                                        [RUNNING] [PASSED] 
+CASE completion_tests                                   [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: ddk-completion-test passed
+
+------------------------------------------------
+RUNNING TEST: debugger-test
+
+
+CASE debugger_tests                                     [STARTED] 
+    debugger_test                                       [RUNNING] [PASSED] 
+CASE debugger_tests                                     [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: debugger-test passed
+
+------------------------------------------------
+RUNNING TEST: dlfcn-test
+
+
+CASE dlfcn_tests                                        [STARTED] 
+    dlopen_vmo_test                                     [RUNNING] [PASSED] 
+    loader_service_test                                 [RUNNING] [PASSED] 
+CASE dlfcn_tests                                        [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: dlfcn-test passed
+
+------------------------------------------------
+RUNNING TEST: echo-test
+
+
+CASE echo_tests                                         [STARTED] 
+    echo_test                                           [RUNNING] [PASSED] 
+CASE echo_tests                                         [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: echo-test passed
+
+------------------------------------------------
+RUNNING TEST: elf-tls-test
+
+
+CASE elf_tls_tests                                      [STARTED] 
+    executable_tls_test                                 [RUNNING] [PASSED] 
+    dso_tls_test                                        [RUNNING] [PASSED] 
+CASE elf_tls_tests                                      [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: elf-tls-test passed
+
+------------------------------------------------
+RUNNING TEST: errno-test
+
+
+CASE errno_tests                                        [STARTED] 
+    errno_test                                          [RUNNING] [PASSED] 
+CASE errno_tests                                        [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: errno-test passed
+
+------------------------------------------------
+RUNNING TEST: event-pair-test
+
+
+CASE event_pair_tests                                   [STARTED] 
+    create_test                                         [RUNNING] [PASSED] 
+    signal_test                                         [RUNNING] [PASSED] 
+CASE event_pair_tests                                   [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: event-pair-test passed
+
+------------------------------------------------
+RUNNING TEST: events-test
+
+
+CASE event_tests                                        [STARTED] 
+    basic_test                                          [RUNNING] [PASSED] 
+    user_signals_test                                   [RUNNING] [PASSED] 
+    wait_signals_test                                   [RUNNING] [PASSED] 
+    reset_test                                          [RUNNING] [PASSED] 
+    wait_many_failures_test                             [RUNNING] [PASSED] 
+CASE event_tests                                        [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: events-test passed
+
+------------------------------------------------
+RUNNING TEST: exception-test
+
+
+CASE exceptions_tests                                   [STARTED] 
+    process_set_close_set_test                          [RUNNING] [PASSED] 
+    thread_set_close_set_test                           [RUNNING] [PASSED] 
+    process_handler_test                                [RUNNING][00093.887] U <== fatal exception: process [2409] thread [2441]
+[00093.888] U <== fatal page fault , PC at 0x10f1286
+[00093.889] U  CS:                   0 RIP:          0x10f1286 EFL:              0x246 CR2:                  0
+[00093.889] U  RAX:          0x10f1270 RBX:         0x3eb47629 RCX:                  0 RDX:                0x1
+[00093.889] U  RSI:          0x10f27e8 RDI:                  0 RBP:          0x10efdf0 RSP:          0x10efd80
+[00093.889] U   R8:                  0  R9:                  0 R10:                  0 R11:          0x10efe40
+[00093.889] U  R12:          0x10f8240 R13:          0x10efdb8 R14:          0x10efdb0 R15:                0x1
+[00093.889] U  errc:               0x6
+[00093.889] U bottom of user stack:
+[00093.889] U 0x01101de0: 010efda4 00000000 010efda8 00000000 |................|
+[00093.889] U 0x01101df0: 00000000 00000000 0000fff0 00000000 |................|
+[00093.890] U 0x01101e00: 00000002 00000000 010efe40 00000000 |........@.......|
+[00093.890] U 0x01101e10: 00000008 00000000 00000001 00000000 |................|
+[00093.890] U 0x01101e20: 010efdd0 00000000 010f8240 00000000 |........@.......|
+[00093.890] U 0x01101e30: 3eb47629 00000000 010efe30 00000000 |)v.>....0.......|
+[00093.890] U 0x01101e40: 010efe48 00000000 0000000e 00000000 |H...............|
+[00093.890] U 0x01101e50: 010efe20 00000000 010f0dcf 00000000 | ...............|
+[00093.890] U 0x01101e60: 010efe70 00000000 010eff88 00000000 |p...............|
+[00093.890] U 0x01101e70: 010efe70 00000000 010eff88 00000000 |p...............|
+[00093.890] U 0x01101e80: 010effe0 00000000 0101d952 00000000 |........R.......|
+[00093.890] U 0x01101e90: 010eff04 00000000 010eff1e 00000000 |................|
+[00093.890] U 0x01101ea0: 00000000 00000000 00000000 00000000 |................|
+[00093.890] U 0x01101eb0: 00000000 00000000 00000000 00000000 |................|
+[00093.890] U 0x01101ec0: 010eff80 00000000 00000000 00000000 |................|
+[00093.890] U 0x01101ed0: 00000000 3eb479fd 00000000 00000000 |.....y.>........|
+[00093.890] U arch: x86_64
+[00093.895] U dso: id=f410f1c6326849b06727222c0b0522ef2ef92b56 base=0x1103000 name=libmxio.so
+[00093.895] U dso: id=fb99a8b486173130c1a19bb41bfdcee947186d61 base=0x10fc000 name=liblaunchpad.so
+[00093.895] U dso: id=cc42221fbd02a7a269e28b43f202a75079bafd7b base=0x10f9000 name=libtest-utils.so
+[00093.895] U dso: id=87c8780efd3f46b65c3cd72d30501aeb22bd2c6c base=0x10f5000 name=libunittest.so
+[00093.895] U dso: id=f07a1be94c2b1ad333456557a3cd3b9a7f47b13b base=0x10f0000 name=app
+[00093.895] U dso: id=53d16d24ec536f04af07d46cf78ba68e5bafee07 base=0x10aa000 name=<vDSO>
+[00093.895] U dso: id=f03cc0c0adfce5674532404b79afea815fc663f1 base=0x1000000 name=libmusl.so
+[00093.896] U bt#01: pc 0x10f1286 sp 0x10efdf0 (app,0x1286)
+[00093.896] U bt#02: pc 0x10f0dcf sp 0x10efdf0 (app,0xdcf)
+[00093.896] U bt#03: pc 0x101d952 sp 0x10efe20 (libmusl.so,0x1d952)
+[00093.896] U bt#04: pc 0 sp 0x10effe0
+[00093.896] U bt#05: end
+ [PASSED] 
+    thread_handler_test                                 [RUNNING][00094.074] U <== fatal exception: process [2462] thread [2508]
+[00094.074] U <== fatal page fault , PC at 0x10f1286
+[00094.074] U  CS:                   0 RIP:          0x10f1286 EFL:              0x246 CR2:                  0
+[00094.074] U  RAX:          0x10f1270 RBX:         0x7062f879 RCX:                  0 RDX:                0x1
+[00094.074] U  RSI:          0x10f27e8 RDI:                  0 RBP:          0x1128a10 RSP:          0x11289a0
+[00094.074] U   R8:                  0  R9:                  0 R10:                  0 R11:                  0
+[00094.074] U  R12:          0x10f8240 R13:          0x11289d8 R14:          0x11289d0 R15:                0x1
+[00094.074] U  errc:               0x6
+[00094.074] U bottom of user stack:
+[00094.074] U 0x01101de0: 011289c4 00000000 011289c8 00000000 |................|
+[00094.074] U 0x01101df0: 00000000 00000000 00000000 00000000 |................|
+[00094.074] U 0x01101e00: 00000000 00000000 00000000 00000000 |................|
+[00094.074] U 0x01101e10: 00000008 00000000 00000001 00000000 |................|
+[00094.074] U 0x01101e20: 00000000 00000000 7062f879 00000000 |........y.bp....|
+[00094.074] U 0x01101e30: 010f8240 00000000 00000000 00000000 |@...............|
+[00094.074] U 0x01101e40: 00000000 00000000 00000000 00000000 |................|
+[00094.074] U 0x01101e50: 01128a30 00000000 010f14ce 00000000 |0...............|
+[00094.074] U 0x01101e60: 01128ac0 00000000 00000000 00000000 |................|
+[00094.075] U 0x01101e70: 01128a60 00000000 0101a78a 00000000 |`...............|
+[00094.075] U 0x01101e80: 00000000 00000000 01128ac0 00000000 |................|
+[00094.075] U 0x01101e90: 00000000 00000000 01112000 00000000 |......... ......|
+[00094.075] U 0x01101ea0: 01128a80 00000000 010640da 00000000 |.........@......|
+[00094.075] U 0x01101eb0: 00000000 00000000 00000000 00000000 |................|
+[00094.075] U 0x01101ec0: 00000000 00000000 00000000 00000000 |................|
+[00094.075] U 0x01101ed0: 00000001 00000000 01128ab0 00000000 |................|
+[00094.075] U arch: x86_64
+[00094.080] U dso: id=f410f1c6326849b06727222c0b0522ef2ef92b56 base=0x1103000 name=libmxio.so
+[00094.080] U dso: id=fb99a8b486173130c1a19bb41bfdcee947186d61 base=0x10fc000 name=liblaunchpad.so
+[00094.080] U dso: id=cc42221fbd02a7a269e28b43f202a75079bafd7b base=0x10f9000 name=libtest-utils.so
+[00094.080] U dso: id=87c8780efd3f46b65c3cd72d30501aeb22bd2c6c base=0x10f5000 name=libunittest.so
+[00094.080] U dso: id=f07a1be94c2b1ad333456557a3cd3b9a7f47b13b base=0x10f0000 name=app
+[00094.080] U dso: id=53d16d24ec536f04af07d46cf78ba68e5bafee07 base=0x10aa000 name=<vDSO>
+[00094.080] U dso: id=f03cc0c0adfce5674532404b79afea815fc663f1 base=0x1000000 name=libmusl.so
+[00094.080] U bt#01: pc 0x10f1286 sp 0x1128a10 (app,0x1286)
+[00094.080] U bt#02: pc 0x10f14ce sp 0x1128a10 (app,0x14ce)
+[00094.080] U bt#03: pc 0x101a78a sp 0x1128a30 (libmusl.so,0x1a78a)
+[00094.080] U bt#04: pc 0x10640da sp 0x1128a60 (libmusl.so,0x640da)
+[00094.080] U bt#05: pc 0 sp 0x1128a80
+[00094.080] U bt#06: end
+ [PASSED] 
+    process_gone_notification_test                      [RUNNING] [PASSED] 
+    thread_gone_notification_test                       [RUNNING] [PASSED] 
+CASE exceptions_tests                                   [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: exception-test passed
+
+------------------------------------------------
+RUNNING TEST: exit-test
+
+
+CASE hard_to_exit                                       [STARTED] 
+    mutex_block                                         [RUNNING] [PASSED] 
+CASE hard_to_exit                                       [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: exit-test passed
+
+------------------------------------------------
+RUNNING TEST: fpu-test
+
+
+CASE fpu_tests                                          [STARTED] 
+    fpu_test                                            [RUNNING] [PASSED] 
+CASE fpu_tests                                          [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: fpu-test passed
+
+------------------------------------------------
+RUNNING TEST: futex-test
+
+
+CASE futex_tests                                        [STARTED] 
+    test_futex_wait_value_mismatch                      [RUNNING] [PASSED] 
+    test_futex_wait_timeout                             [RUNNING] [PASSED] 
+    test_futex_wait_timeout_elapsed                     [RUNNING] [PASSED] 
+    test_futex_wait_bad_address                         [RUNNING] [PASSED] 
+    test_futex_wakeup                                   [RUNNING] [PASSED] 
+    test_futex_wakeup_limit                             [RUNNING] [PASSED] 
+    test_futex_wakeup_address                           [RUNNING] [PASSED] 
+    test_futex_unqueued_on_timeout                      [RUNNING] [PASSED] 
+    test_futex_unqueued_on_timeout_2                    [RUNNING] [PASSED] 
+    test_futex_unqueued_on_timeout_3                    [RUNNING] [PASSED] 
+    test_futex_requeue_value_mismatch                   [RUNNING] [PASSED] 
+    test_futex_requeue_same_addr                        [RUNNING] [PASSED] 
+    test_futex_requeue                                  [RUNNING] [PASSED] 
+    test_futex_requeue_unqueued_on_timeout              [RUNNING] [PASSED] 
+    test_event_signaling                                [RUNNING] [PASSED] 
+CASE futex_tests                                        [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: futex-test passed
+
+------------------------------------------------
+RUNNING TEST: handle-info-test
+
+
+CASE handle_info_tests                                  [STARTED] 
+    handle_info_test                                    [RUNNING] [PASSED] 
+    handle_rights_test                                  [RUNNING] [PASSED] 
+CASE handle_info_tests                                  [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: handle-info-test passed
+
+------------------------------------------------
+RUNNING TEST: handle-transfer-test
+
+
+CASE handle_transfer_tests                              [STARTED] 
+    handle_transfer_test                                [RUNNING] [PASSED] 
+    handle_transfer_cancel_wait_test                    [RUNNING] [PASSED] 
+CASE handle_transfer_tests                              [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: handle-transfer-test passed
+
+------------------------------------------------
+RUNNING TEST: handle-wait-test
+
+
+CASE handle_wait_tests                                  [STARTED] 
+    handle_wait_test                                    [RUNNING] [PASSED] 
+CASE handle_wait_tests                                  [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: handle-wait-test passed
+
+------------------------------------------------
+RUNNING TEST: io-port-test
+
+
+CASE io_port_tests                                      [STARTED] 
+    basic_test                                          [RUNNING] [PASSED] 
+    queue_and_close_test                                [RUNNING] [PASSED] 
+    thread_pool_test                                    [RUNNING] [PASSED] 
+    bind_basic_test                                     [RUNNING] [PASSED] 
+    bind_pipes_test                                     [RUNNING] [PASSED] 
+    bind_sockets_test                                   [RUNNING] [PASSED] 
+    bind_pipes_playback                                 [RUNNING] [PASSED] 
+CASE io_port_tests                                      [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: io-port-test passed
+
+------------------------------------------------
+RUNNING TEST: memory-mapping-test
+
+
+CASE memory_mapping_tests                               [STARTED] 
+    address_space_limits_test                           [RUNNING] [PASSED] 
+    mmap_len_test                                       [RUNNING] [PASSED] 
+    mmap_offset_test                                    [RUNNING] [PASSED] 
+    mmap_prot_test                                      [RUNNING] [PASSED] 
+    mmap_flags_test                                     [RUNNING] [PASSED] 
+    mprotect_test                                       [RUNNING] [PASSED] 
+CASE memory_mapping_tests                               [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: memory-mapping-test passed
+
+------------------------------------------------
+RUNNING TEST: message-pipe-test
+
+
+CASE message_pipe_tests                                 [STARTED] 
+    message_pipe_test                                   [RUNNING] [PASSED] 
+    message_pipe_read_error_test                        [RUNNING] [PASSED] 
+    message_pipe_close_test                             [RUNNING] [PASSED] 
+    message_pipe_non_transferable                       [RUNNING] [PASSED] 
+    message_pipe_duplicate_handles                      [RUNNING] [PASSED] 
+    message_pipe_multithread_read                       [RUNNING] [PASSED] 
+CASE message_pipe_tests                                 [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: message-pipe-test passed
+
+------------------------------------------------
+RUNNING TEST: mxr-mutex-test
+
+
+CASE mxr_mutex_tests                                    [STARTED] 
+    test_initializer                                    [RUNNING] [PASSED] 
+    test_mutexes                                        [RUNNING] [PASSED] 
+    test_try_mutexes                                    [RUNNING] [PASSED] 
+CASE mxr_mutex_tests                                    [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: mxr-mutex-test passed
+
+------------------------------------------------
+RUNNING TEST: mxtl-test
+
+
+CASE unique_ptr                                         [STARTED] 
+    Scoped Destruction                                  [RUNNING] [PASSED] 
+    Move                                                [RUNNING] [PASSED] 
+    nullptr Scoped Destruction                          [RUNNING] [PASSED] 
+    Different Scope Swapping                            [RUNNING] [PASSED] 
+    operator bool                                       [RUNNING] [PASSED] 
+    comparison operators                                [RUNNING] [PASSED] 
+    Array Scoped Destruction                            [RUNNING] [PASSED] 
+    Array Move                                          [RUNNING] [PASSED] 
+    Array nullptr Scoped Destruction                    [RUNNING] [PASSED] 
+    Array Different Scope Swapping                      [RUNNING] [PASSED] 
+    Array operator bool                                 [RUNNING] [PASSED] 
+    Array comparison operators                          [RUNNING] [PASSED] 
+CASE unique_ptr                                         [PASSED]
+
+CASE ref_ptr_tests                                      [STARTED] 
+    Ref Pointer                                         [RUNNING] [PASSED] 
+    Ref Pointer Comparison                              [RUNNING] [PASSED] 
+CASE ref_ptr_tests                                      [PASSED]
+
+CASE ref_counted_tests                                  [STARTED] 
+    Ref Counted                                         [RUNNING] [PASSED] 
+CASE ref_counted_tests                                  [PASSED]
+
+CASE wavl_tree_tests                                    [STARTED] 
+    Clear (unmanaged)                                   [RUNNING] [PASSED] 
+    Clear (unique)                                      [RUNNING] [PASSED] 
+    Clear (RefPtr)                                      [RUNNING] [PASSED] 
+    IsEmpty (unmanaged)                                 [RUNNING] [PASSED] 
+    IsEmpty (unique)                                    [RUNNING] [PASSED] 
+    IsEmpty (RefPtr)                                    [RUNNING] [PASSED] 
+    Iterate (unmanaged)                                 [RUNNING] [PASSED] 
+    Iterate (unique)                                    [RUNNING] [PASSED] 
+    Iterate (RefPtr)                                    [RUNNING] [PASSED] 
+    IterErase (unmanaged)                               [RUNNING] [PASSED] 
+    IterErase (unique)                                  [RUNNING] [PASSED] 
+    IterErase (RefPtr)                                  [RUNNING] [PASSED] 
+    DirectErase (unmanaged)                             [RUNNING] [PASSED] 
+    DirectErase (RefPtr)                                [RUNNING] [PASSED] 
+    MakeIterator (unmanaged)                            [RUNNING] [PASSED] 
+    MakeIterator (RefPtr)                               [RUNNING] [PASSED] 
+    ReverseIterErase (unmanaged)                        [RUNNING] [PASSED] 
+    ReverseIterErase (unique)                           [RUNNING] [PASSED] 
+    ReverseIterErase (RefPtr)                           [RUNNING] [PASSED] 
+    ReverseIterate (unmanaged)                          [RUNNING] [PASSED] 
+    ReverseIterate (unique)                             [RUNNING] [PASSED] 
+    ReverseIterate (RefPtr)                             [RUNNING] [PASSED] 
+    Swap (unmanaged)                                    [RUNNING] [PASSED] 
+    Swap (unique)                                       [RUNNING] [PASSED] 
+    Swap (RefPtr)                                       [RUNNING] [PASSED] 
+    Rvalue Ops (unmanaged)                              [RUNNING] [PASSED] 
+    Rvalue Ops (unique)                                 [RUNNING] [PASSED] 
+    Rvalue Ops (RefPtr)                                 [RUNNING] [PASSED] 
+    Scope (unique)                                      [RUNNING] [PASSED] 
+    Scope (RefPtr)                                      [RUNNING] [PASSED] 
+    TwoContainer (unmanaged)                            [RUNNING] [PASSED] 
+    TwoContainer (RefPtr)                               [RUNNING] [PASSED] 
+    IterCopyPointer (unmanaged)                         [RUNNING] [PASSED] 
+    IterCopyPointer (RefPtr)                            [RUNNING] [PASSED] 
+    EraseIf (unmanaged)                                 [RUNNING] [PASSED] 
+    EraseIf (unique)                                    [RUNNING] [PASSED] 
+    EraseIf (RefPtr)                                    [RUNNING] [PASSED] 
+    FindIf (unmanaged)                                  [RUNNING] [PASSED] 
+    FindIf (unique)                                     [RUNNING] [PASSED] 
+    FindIf (RefPtr)                                     [RUNNING] [PASSED] 
+    InsertByKey (unmanaged)                             [RUNNING] [PASSED] 
+    InsertByKey (unique)                                [RUNNING] [PASSED] 
+    InsertByKey (RefPtr)                                [RUNNING] [PASSED] 
+    FindByKey (unmanaged)                               [RUNNING] [PASSED] 
+    FindByKey (unique)                                  [RUNNING] [PASSED] 
+    FindByKey (RefPtr)                                  [RUNNING] [PASSED] 
+    EraseByKey (unmanaged)                              [RUNNING] [PASSED] 
+    EraseByKey (unique)                                 [RUNNING] [PASSED] 
+    EraseByKey (RefPtr)                                 [RUNNING] [PASSED] 
+    InsertOrFind (unmanaged)                            [RUNNING] [PASSED] 
+    InsertOrFind (unique)                               [RUNNING] [PASSED] 
+    InsertOrFind (RefPtr)                               [RUNNING] [PASSED] 
+    OrderedIter (unmanaged)                             [RUNNING] [PASSED] 
+    OrderedIter (unique)                                [RUNNING] [PASSED] 
+    OrderedIter (RefPtr)                                [RUNNING] [PASSED] 
+    OrderedReverseIter (unmanaged)                      [RUNNING] [PASSED] 
+    OrderedReverseIter (unique)                         [RUNNING] [PASSED] 
+    OrderedReverseIter (RefPtr)                         [RUNNING] [PASSED] 
+    UpperBound (unmanaged)                              [RUNNING] [PASSED] 
+    UpperBound (unique)                                 [RUNNING] [PASSED] 
+    UpperBound (RefPtr)                                 [RUNNING] [PASSED] 
+    LowerBound (unmanaged)                              [RUNNING] [PASSED] 
+    LowerBound (unique)                                 [RUNNING] [PASSED] 
+    LowerBound (RefPtr)                                 [RUNNING] [PASSED] 
+    BalanceTest                                         [RUNNING] [PASSED] 
+CASE wavl_tree_tests                                    [PASSED]
+
+CASE single_linked_list_tests                           [STARTED] 
+    Clear (unmanaged)                                   [RUNNING] [PASSED] 
+    Clear (unique)                                      [RUNNING] [PASSED] 
+    Clear (RefPtr)                                      [RUNNING] [PASSED] 
+    IsEmpty (unmanaged)                                 [RUNNING] [PASSED] 
+    IsEmpty (unique)                                    [RUNNING] [PASSED] 
+    IsEmpty (RefPtr)                                    [RUNNING] [PASSED] 
+    Iterate (unmanaged)                                 [RUNNING] [PASSED] 
+    Iterate (unique)                                    [RUNNING] [PASSED] 
+    Iterate (RefPtr)                                    [RUNNING] [PASSED] 
+    MakeIterator (unmanaged)                            [RUNNING] [PASSED] 
+    MakeIterator (RefPtr)                               [RUNNING] [PASSED] 
+    Swap (unmanaged)                                    [RUNNING] [PASSED] 
+    Swap (unique)                                       [RUNNING] [PASSED] 
+    Swap (RefPtr)                                       [RUNNING] [PASSED] 
+    Rvalue Ops (unmanaged)                              [RUNNING] [PASSED] 
+    Rvalue Ops (unique)                                 [RUNNING] [PASSED] 
+    Rvalue Ops (RefPtr)                                 [RUNNING] [PASSED] 
+    Scope (unique)                                      [RUNNING] [PASSED] 
+    Scope (RefPtr)                                      [RUNNING] [PASSED] 
+    TwoContainer (unmanaged)                            [RUNNING] [PASSED] 
+    TwoContainer (RefPtr)                               [RUNNING] [PASSED] 
+    IterCopyPointer (unmanaged)                         [RUNNING] [PASSED] 
+    IterCopyPointer (RefPtr)                            [RUNNING] [PASSED] 
+    EraseIf (unmanaged)                                 [RUNNING] [PASSED] 
+    EraseIf (unique)                                    [RUNNING] [PASSED] 
+    EraseIf (RefPtr)                                    [RUNNING] [PASSED] 
+    FindIf (unmanaged)                                  [RUNNING] [PASSED] 
+    FindIf (unique)                                     [RUNNING] [PASSED] 
+    FindIf (RefPtr)                                     [RUNNING] [PASSED] 
+    PushFront (unmanaged)                               [RUNNING] [PASSED] 
+    PushFront (unique)                                  [RUNNING] [PASSED] 
+    PushFront (RefPtr)                                  [RUNNING] [PASSED] 
+    PopFront (unmanaged)                                [RUNNING] [PASSED] 
+    PopFront (unique)                                   [RUNNING] [PASSED] 
+    PopFront (RefPtr)                                   [RUNNING] [PASSED] 
+    SeqIterate (unmanaged)                              [RUNNING] [PASSED] 
+    SeqIterate (unique)                                 [RUNNING] [PASSED] 
+    SeqIterate (RefPtr)                                 [RUNNING] [PASSED] 
+    EraseNext (unmanaged)                               [RUNNING] [PASSED] 
+    EraseNext (unique)                                  [RUNNING] [PASSED] 
+    EraseNext (RefPtr)                                  [RUNNING] [PASSED] 
+    InsertAfter (unmanaged)                             [RUNNING] [PASSED] 
+    InsertAfter (unique)                                [RUNNING] [PASSED] 
+    InsertAfter (RefPtr)                                [RUNNING] [PASSED] 
+CASE single_linked_list_tests                           [PASSED]
+
+CASE hashtable_sll_tests                                [STARTED] 
+    Clear (unmanaged)                                   [RUNNING] [PASSED] 
+    Clear (unique)                                      [RUNNING] [PASSED] 
+    Clear (RefPtr)                                      [RUNNING] [PASSED] 
+    IsEmpty (unmanaged)                                 [RUNNING] [PASSED] 
+    IsEmpty (unique)                                    [RUNNING] [PASSED] 
+    IsEmpty (RefPtr)                                    [RUNNING] [PASSED] 
+    Iterate (unmanaged)                                 [RUNNING] [PASSED] 
+    Iterate (unique)                                    [RUNNING] [PASSED] 
+    Iterate (RefPtr)                                    [RUNNING] [PASSED] 
+    IterErase (unmanaged)                               [RUNNING] [PASSED] 
+    IterErase (unique)                                  [RUNNING] [PASSED] 
+    IterErase (RefPtr)                                  [RUNNING] [PASSED] 
+    DirectErase (unmanaged)                             [RUNNING] [PASSED] 
+    DirectErase (RefPtr)                                [RUNNING] [PASSED] 
+    MakeIterator (unmanaged)                            [RUNNING] [PASSED] 
+    MakeIterator (RefPtr)                               [RUNNING] [PASSED] 
+    Scope (unique)                                      [RUNNING] [PASSED] 
+    Scope (RefPtr)                                      [RUNNING] [PASSED] 
+    TwoContainer (unmanaged)                            [RUNNING] [PASSED] 
+    TwoContainer (RefPtr)                               [RUNNING] [PASSED] 
+    IterCopyPointer (unmanaged)                         [RUNNING] [PASSED] 
+    IterCopyPointer (RefPtr)                            [RUNNING] [PASSED] 
+    EraseIf (unmanaged)                                 [RUNNING] [PASSED] 
+    EraseIf (unique)                                    [RUNNING] [PASSED] 
+    EraseIf (RefPtr)                                    [RUNNING] [PASSED] 
+    FindIf (unmanaged)                                  [RUNNING] [PASSED] 
+    FindIf (unique)                                     [RUNNING] [PASSED] 
+    FindIf (RefPtr)                                     [RUNNING] [PASSED] 
+    InsertByKey (unmanaged)                             [RUNNING] [PASSED] 
+    InsertByKey (unique)                                [RUNNING] [PASSED] 
+    InsertByKey (RefPtr)                                [RUNNING] [PASSED] 
+    FindByKey (unmanaged)                               [RUNNING] [PASSED] 
+    FindByKey (unique)                                  [RUNNING] [PASSED] 
+    FindByKey (RefPtr)                                  [RUNNING] [PASSED] 
+    EraseByKey (unmanaged)                              [RUNNING] [PASSED] 
+    EraseByKey (unique)                                 [RUNNING] [PASSED] 
+    EraseByKey (RefPtr)                                 [RUNNING] [PASSED] 
+    InsertOrFind (unmanaged)                            [RUNNING] [PASSED] 
+    InsertOrFind (unique)                               [RUNNING] [PASSED] 
+    InsertOrFind (RefPtr)                               [RUNNING] [PASSED] 
+CASE hashtable_sll_tests                                [PASSED]
+
+CASE hashtable_dll_tests                                [STARTED] 
+    Clear (unmanaged)                                   [RUNNING] [PASSED] 
+    Clear (unique)                                      [RUNNING] [PASSED] 
+    Clear (RefPtr)                                      [RUNNING] [PASSED] 
+    IsEmpty (unmanaged)                                 [RUNNING] [PASSED] 
+    IsEmpty (unique)                                    [RUNNING] [PASSED] 
+    IsEmpty (RefPtr)                                    [RUNNING] [PASSED] 
+    Iterate (unmanaged)                                 [RUNNING] [PASSED] 
+    Iterate (unique)                                    [RUNNING] [PASSED] 
+    Iterate (RefPtr)                                    [RUNNING] [PASSED] 
+    IterErase (unmanaged)                               [RUNNING] [PASSED] 
+    IterErase (unique)                                  [RUNNING] [PASSED] 
+    IterErase (RefPtr)                                  [RUNNING] [PASSED] 
+    DirectErase (unmanaged)                             [RUNNING] [PASSED] 
+    DirectErase (RefPtr)                                [RUNNING] [PASSED] 
+    MakeIterator (unmanaged)                            [RUNNING] [PASSED] 
+    MakeIterator (RefPtr)                               [RUNNING] [PASSED] 
+    ReverseIterErase (unmanaged)                        [RUNNING] [PASSED] 
+    ReverseIterErase (unique)                           [RUNNING] [PASSED] 
+    ReverseIterErase (RefPtr)                           [RUNNING] [PASSED] 
+    ReverseIterate (unmanaged)                          [RUNNING] [PASSED] 
+    ReverseIterate (unique)                             [RUNNING] [PASSED] 
+    ReverseIterate (RefPtr)                             [RUNNING] [PASSED] 
+    Scope (unique)                                      [RUNNING] [PASSED] 
+    Scope (RefPtr)                                      [RUNNING] [PASSED] 
+    TwoContainer (unmanaged)                            [RUNNING] [PASSED] 
+    TwoContainer (RefPtr)                               [RUNNING] [PASSED] 
+    IterCopyPointer (unmanaged)                         [RUNNING] [PASSED] 
+    IterCopyPointer (RefPtr)                            [RUNNING] [PASSED] 
+    EraseIf (unmanaged)                                 [RUNNING] [PASSED] 
+    EraseIf (unique)                                    [RUNNING] [PASSED] 
+    EraseIf (RefPtr)                                    [RUNNING] [PASSED] 
+    FindIf (unmanaged)                                  [RUNNING] [PASSED] 
+    FindIf (unique)                                     [RUNNING] [PASSED] 
+    FindIf (RefPtr)                                     [RUNNING] [PASSED] 
+    InsertByKey (unmanaged)                             [RUNNING] [PASSED] 
+    InsertByKey (unique)                                [RUNNING] [PASSED] 
+    InsertByKey (RefPtr)                                [RUNNING] [PASSED] 
+    FindByKey (unmanaged)                               [RUNNING] [PASSED] 
+    FindByKey (unique)                                  [RUNNING] [PASSED] 
+    FindByKey (RefPtr)                                  [RUNNING] [PASSED] 
+    EraseByKey (unmanaged)                              [RUNNING] [PASSED] 
+    EraseByKey (unique)                                 [RUNNING] [PASSED] 
+    EraseByKey (RefPtr)                                 [RUNNING] [PASSED] 
+    InsertOrFind (unmanaged)                            [RUNNING] [PASSED] 
+    InsertOrFind (unique)                               [RUNNING] [PASSED] 
+    InsertOrFind (RefPtr)                               [RUNNING] [PASSED] 
+CASE hashtable_dll_tests                                [PASSED]
+
+CASE double_linked_list_tests                           [STARTED] 
+    Clear (unmanaged)                                   [RUNNING] [PASSED] 
+    Clear (unique)                                      [RUNNING] [PASSED] 
+    Clear (RefPtr)                                      [RUNNING] [PASSED] 
+    IsEmpty (unmanaged)                                 [RUNNING] [PASSED] 
+    IsEmpty (unique)                                    [RUNNING] [PASSED] 
+    IsEmpty (RefPtr)                                    [RUNNING] [PASSED] 
+    Iterate (unmanaged)                                 [RUNNING] [PASSED] 
+    Iterate (unique)                                    [RUNNING] [PASSED] 
+    Iterate (RefPtr)                                    [RUNNING] [PASSED] 
+    IterErase (unmanaged)                               [RUNNING] [PASSED] 
+    IterErase (unique)                                  [RUNNING] [PASSED] 
+    IterErase (RefPtr)                                  [RUNNING] [PASSED] 
+    DirectErase (unmanaged)                             [RUNNING] [PASSED] 
+    DirectErase (unique)                                [RUNNING] [PASSED] 
+    DirectErase (RefPtr)                                [RUNNING] [PASSED] 
+    MakeIterator (unmanaged)                            [RUNNING] [PASSED] 
+    MakeIterator (RefPtr)                               [RUNNING] [PASSED] 
+    ReverseIterErase (unmanaged)                        [RUNNING] [PASSED] 
+    ReverseIterErase (unique)                           [RUNNING] [PASSED] 
+    ReverseIterErase (RefPtr)                           [RUNNING] [PASSED] 
+    ReverseIterate (unmanaged)                          [RUNNING] [PASSED] 
+    ReverseIterate (unique)                             [RUNNING] [PASSED] 
+    ReverseIterate (RefPtr)                             [RUNNING] [PASSED] 
+    Swap (unmanaged)                                    [RUNNING] [PASSED] 
+    Swap (unique)                                       [RUNNING] [PASSED] 
+    Swap (RefPtr)                                       [RUNNING] [PASSED] 
+    Rvalue Ops (unmanaged)                              [RUNNING] [PASSED] 
+    Rvalue Ops (unique)                                 [RUNNING] [PASSED] 
+    Rvalue Ops (RefPtr)                                 [RUNNING] [PASSED] 
+    Scope (unique)                                      [RUNNING] [PASSED] 
+    Scope (RefPtr)                                      [RUNNING] [PASSED] 
+    TwoContainer (unmanaged)                            [RUNNING] [PASSED] 
+    TwoContainer (RefPtr)                               [RUNNING] [PASSED] 
+    IterCopyPointer (unmanaged)                         [RUNNING] [PASSED] 
+    IterCopyPointer (RefPtr)                            [RUNNING] [PASSED] 
+    EraseIf (unmanaged)                                 [RUNNING] [PASSED] 
+    EraseIf (unique)                                    [RUNNING] [PASSED] 
+    EraseIf (RefPtr)                                    [RUNNING] [PASSED] 
+    FindIf (unmanaged)                                  [RUNNING] [PASSED] 
+    FindIf (unique)                                     [RUNNING] [PASSED] 
+    FindIf (RefPtr)                                     [RUNNING] [PASSED] 
+    PushFront (unmanaged)                               [RUNNING] [PASSED] 
+    PushFront (unique)                                  [RUNNING] [PASSED] 
+    PushFront (RefPtr)                                  [RUNNING] [PASSED] 
+    PopFront (unmanaged)                                [RUNNING] [PASSED] 
+    PopFront (unique)                                   [RUNNING] [PASSED] 
+    PopFront (RefPtr)                                   [RUNNING] [PASSED] 
+    PushBack (unmanaged)                                [RUNNING] [PASSED] 
+    PushBack (unique)                                   [RUNNING] [PASSED] 
+    PushBack (RefPtr)                                   [RUNNING] [PASSED] 
+    PopBack (unmanaged)                                 [RUNNING] [PASSED] 
+    PopBack (unique)                                    [RUNNING] [PASSED] 
+    PopBack (RefPtr)                                    [RUNNING] [PASSED] 
+    SeqIterate (unmanaged)                              [RUNNING] [PASSED] 
+    SeqIterate (unique)                                 [RUNNING] [PASSED] 
+    SeqIterate (RefPtr)                                 [RUNNING] [PASSED] 
+    SeqReverseIterate (unmanaged)                       [RUNNING] [PASSED] 
+    SeqReverseIterate (unique)                          [RUNNING] [PASSED] 
+    SeqReverseIterate (RefPtr)                          [RUNNING] [PASSED] 
+    EraseNext (unmanaged)                               [RUNNING] [PASSED] 
+    EraseNext (unique)                                  [RUNNING] [PASSED] 
+    EraseNext (RefPtr)                                  [RUNNING] [PASSED] 
+    InsertAfter (unmanaged)                             [RUNNING] [PASSED] 
+    InsertAfter (unique)                                [RUNNING] [PASSED] 
+    InsertAfter (RefPtr)                                [RUNNING] [PASSED] 
+    Insert (unmanaged)                                  [RUNNING] [PASSED] 
+    Insert (unique)                                     [RUNNING] [PASSED] 
+    Insert (RefPtr)                                     [RUNNING] [PASSED] 
+    DirectInsert (unmanaged)                            [RUNNING] [PASSED] 
+    DirectInsert (unique)                               [RUNNING] [PASSED] 
+    DirectInsert (RefPtr)                               [RUNNING] [PASSED] 
+CASE double_linked_list_tests                           [PASSED]
+
+CASE inline_array_tests                                 [STARTED] 
+    inline test                                         [RUNNING] [PASSED] 
+    non-inline test                                     [RUNNING] [PASSED] 
+CASE inline_array_tests                                 [PASSED]
+
+CASE forward_tests                                      [STARTED] 
+    Forward test                                        [RUNNING] [PASSED] 
+CASE forward_tests                                      [PASSED]
+
+CASE auto_call_tests                                    [STARTED] 
+    Auto call test                                      [RUNNING] [PASSED] 
+CASE auto_call_tests                                    [PASSED]
+
+CASE algorithm_tests                                    [STARTED] 
+    min test                                            [RUNNING] [PASSED] 
+    max test                                            [RUNNING] [PASSED] 
+    clamp test                                          [RUNNING] [PASSED] 
+CASE algorithm_tests                                    [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  12     SUCCESS:  12     FAILED:  0   
+====================================================
+PASSED: mxtl-test passed
+
+------------------------------------------------
+RUNNING TEST: pthread-test
+
+
+CASE pthread_tests                                      [STARTED] 
+    pthread_test                                        [RUNNING] [PASSED] 
+    pthread_self_main_thread_test                       [RUNNING] [PASSED] 
+    pthread_big_stack_size                              [RUNNING] [PASSED] 
+    pthread_big_provided_stack                          [RUNNING] [PASSED] 
+CASE pthread_tests                                      [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: pthread-test passed
+
+------------------------------------------------
+RUNNING TEST: pthread-tls-test
+
+
+CASE tls_tests                                          [STARTED] 
+    tls_test                                            [RUNNING] [PASSED] 
+CASE tls_tests                                          [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: pthread-tls-test passed
+
+------------------------------------------------
+RUNNING TEST: qsort-test
+
+
+CASE qsort_tests                                        [STARTED] 
+    qsort_test                                          [RUNNING] [PASSED] 
+CASE qsort_tests                                        [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: qsort-test passed
+
+------------------------------------------------
+RUNNING TEST: reply-handle-test
+
+
+CASE reply_handle_tests                                 [STARTED] 
+    reply_handle_basic                                  [RUNNING] [PASSED] 
+    reply_handle_rw                                     [RUNNING]helper: start
+helper: done [PASSED] 
+CASE reply_handle_tests                                 [PASSED]
+
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: reply-handle-test passed
+
+------------------------------------------------
+RUNNING TEST: socket-test
+
+
+CASE socket_tests                                       [STARTED] 
+    socket_basic                                        [RUNNING] [PASSED] 
+    socket_signals                                      [RUNNING] [PASSED] 
+    socket_oob                                          [RUNNING] [PASSED] 
+CASE socket_tests                                       [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: socket-test passed
+
+------------------------------------------------
+RUNNING TEST: sysconf-test
+
+
+CASE sysconf_tests                                      [STARTED] 
+    sysconf_test                                        [RUNNING] [PASSED] 
+CASE sysconf_tests                                      [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: sysconf-test passed
+
+------------------------------------------------
+RUNNING TEST: thread-initial-state-test
+
+
+CASE tis_tests                                          [STARTED] 
+    tis_test                                            [RUNNING] [PASSED] 
+CASE tis_tests                                          [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: thread-initial-state-test passed
+
+------------------------------------------------
+RUNNING TEST: thread-injection-test
+
+
+CASE thread_injection_tests                             [STARTED] 
+    thread_injection_test                               [RUNNING] [PASSED] 
+CASE thread_injection_tests                             [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: thread-injection-test passed
+
+------------------------------------------------
+RUNNING TEST: threads-test
+
+
+CASE threads_tests                                      [STARTED] 
+    threads_test                                        [RUNNING] [PASSED] 
+CASE threads_tests                                      [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: threads-test passed
+
+------------------------------------------------
+RUNNING TEST: vmo-test
+
+
+CASE vmo_tests                                          [STARTED] 
+    vmo_create_test                                     [RUNNING] [PASSED] 
+    vmo_read_write_test                                 [RUNNING] [PASSED] 
+    vmo_read_only_map_test                              [RUNNING] [PASSED] 
+    vmo_resize_test                                     [RUNNING] [PASSED] 
+    vmo_rights_test                                     [RUNNING] [PASSED] 
+    vmo_lookup_test                                     [RUNNING] [PASSED] 
+CASE vmo_tests                                          [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: vmo-test passed
+
+------------------------------------------------
+RUNNING TEST: wait-set-test
+
+
+CASE wait_set_tests                                     [STARTED] 
+    wait_set_create_test                                [RUNNING] [PASSED] 
+    wait_set_add_remove_test                            [RUNNING] [PASSED] 
+    wait_set_bad_add_remove_test                        [RUNNING] [PASSED] 
+    wait_set_wait_single_thread_1_test                  [RUNNING] [PASSED] 
+    wait_set_wait_single_thread_2_test                  [RUNNING] [PASSED] 
+    wait_set_wait_threaded_test                         [RUNNING] [PASSED] 
+    wait_set_wait_cancelled_test                        [RUNNING] [PASSED] 
+CASE wait_set_tests                                     [PASSED]
+SUCCESS!  All test cases passed!
+
+====================================================
+    CASES:  1     SUCCESS:  1     FAILED:  0   
+====================================================
+PASSED: wait-set-test passed
+
+SUMMARY: Ran 40 tests: 0 failed
+> 
