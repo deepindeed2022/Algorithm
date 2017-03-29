@@ -1,3 +1,4 @@
+//file: 水仙花数
 #include <iostream>
 
 #define POWER_3(x) (x*x*x)
