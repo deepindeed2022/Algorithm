@@ -33,19 +33,9 @@ static int startx, starty;
 static int p, q; //目标的位置
 // 记录最小路径长度
 static int min_step = INT_MAX;
-// 上下左右进行轮询辅助
-static int next_[4][2] = {
-   {0, 1},  //向右走
-   {1, 0},  //向下走
-   {0, -1}, //向左走
-   {-1, 0}  //向上走
-};
+
 static std::vector<std::pair<int, int>> min_path;
-//判断坐标是否合法
-bool inMaze(int tx, int ty)
-{
-   return tx >= 0 && tx < maze_w && ty >= 0 && ty < maze_h;
-}
+
 static int total = 0;
 /**
  * 走迷宫
@@ -70,7 +60,7 @@ void dfs(int x, int y, int step, std::vector<std::pair<int, int>> &path)
    {
       tx = x + next_[i][0];
       ty = y + next_[i][1];
-      if (!inMaze(tx, ty))
+      if (!inMaze(tx, ty, maze_w, maze_h))
          continue;
       if (maze[tx][ty] && !book[tx][ty])
       {
