@@ -62,6 +62,7 @@ void dfs(int x, int y, int step, std::vector<std::pair<int, int>> &path)
       ty = y + next_[i][1];
       if (!inMaze(tx, ty, maze_w, maze_h))
          continue;
+      
       if (maze[tx][ty] && !book[tx][ty])
       {
          path.push_back(std::make_pair(tx, ty));
@@ -81,11 +82,12 @@ int main(int argc, char const *argv[])
    // 读取数据
 
    ifstream cin("dfs_find_maze.txt");
-   ofstream cout("result.txt");
+   //ofstream cout("result.txt");
 
    cin >> maze_h >> maze_w;
    maze.resize(maze_h, std::vector<bool>(maze_w, true));
    book.resize(maze_h, std::vector<bool>(maze_w, false));
+
    int c;
    for (int i = 0; i < maze_h; ++i)
       for (int j = 0; j < maze_w; ++j)
@@ -98,22 +100,24 @@ int main(int argc, char const *argv[])
    //检查输入
    assert(p < maze_h && p >= 0);
    assert(q < maze_w && q >= 0);
+
    cout << " startx:" << startx << " starty: " << starty << std::endl;
    cout << " endx:" << p << " endy: " << q << std::endl;
    cout << " maze_h:" << maze_h << " maze_w: " << maze_w << std::endl;
    std::vector<std::pair<int, int>> path;
    path.clear();
+
    path.push_back(std::make_pair(startx, starty));
    // 走迷宫
-    dfs(startx, starty, 0, path);
-    //结果输出
-    cout <<" min_step:" << min_step << std::endl << " step list:\n  ";
-    for(int  i = 0; i < min_path.size() -1; ++i)
+   dfs(startx, starty, 0, path);
+   //结果输出
+   cout <<" min_step:" << min_step << std::endl << " step list:\n  ";
+   for(int  i = 0; i < min_path.size() -1; ++i)
         cout <<"(" <<min_path[i].first << " " << min_path[i].second<<") -> ";
-    cout <<"(" <<min_path[min_path.size() -1].first << " " << min_path[min_path.size() -1].second<<")";
-    cout << std::endl;
-    //cout << total << std::endl;
-    cout << " Format result:\n";
-    format_path(min_path, maze_w, maze_h, cout);
-    return 0;
+   cout <<"(" <<min_path[min_path.size() -1].first << " " << min_path[min_path.size() -1].second<<")";
+   cout << std::endl;
+   //cout << total << std::endl;
+   cout << " Format result:\n";
+   format_path(min_path, maze_w, maze_h, cout);
+   return 0;
 }

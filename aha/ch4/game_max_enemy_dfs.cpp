@@ -60,6 +60,7 @@ char map[MAX_LEN][MAX_LEN];  // 游戏的地图
 void dfs(const int startx, const int starty, const int n, const int m, 
       int &max_enemy, Point &max_site)
 {
+   // 结束条件
    int sum = getsum(startx, starty, map);
    if (sum > max_enemy)
    {
@@ -67,6 +68,7 @@ void dfs(const int startx, const int starty, const int n, const int m,
       max_site.y = starty;
       max_enemy  = sum;
    }
+   // 递归进行求解
    int tx, ty;
    for (int i = 0; i < 4; ++i)
    {
