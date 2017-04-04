@@ -12,18 +12,17 @@ static int total_v = 0;
 void dfs(const int cur, bool book[MAX_LEN], const int n, std::ostream &os = std::cout)
 {
    os << cur << " ";
-   total_v++;
    book[cur] = true;
    if (total_v == n) return;
    for (int i = 1; i <= n; ++i)
    {
       if (e_graph[cur][i] == 1 && !book[i])
       {
-         book[i] = true;
+  
          dfs(i, book, n, os);
       }
    }
-   return;
+   total_v++;
 }
 // void format_graph()
 // {
@@ -37,12 +36,12 @@ int main(int argc, char const *argv[])
    int V, E;
    int i, j;
 
-   memset(e_graph, INT_MAX, MAX_LEN * MAX_LEN * sizeof(int));
+   memset(e_graph, -1, MAX_LEN * MAX_LEN * sizeof(int));
    // scanf the input data
    fscanf(f, "%d %d", &V, &E);
    for (int i = 1; i <= V; ++i) e_graph[i][i] = 0;
 
-   for (int i = 1; i <= E; ++i)
+   for (int e = 1; e <= E; ++e)
    {
       fscanf(f, "%d %d", &i, &j);
       e_graph[i][j] = 1;
@@ -53,6 +52,14 @@ int main(int argc, char const *argv[])
    // confirm the input value
    assert(E < MAX_LEN && V < MAX_LEN);
    memset(book, false, MAX_LEN * (sizeof(bool)));
+   for(int i = 1; i <= V; i++)
+   {
+      for(int j = 1; j <= V; j++)
+         printf("%d ", e_graph[i][j]);
+      printf("\n");
+   }
+   printf("\n");
    dfs(1, book, V, std::cout);
+   printf("\n");
    return 0;
 }
