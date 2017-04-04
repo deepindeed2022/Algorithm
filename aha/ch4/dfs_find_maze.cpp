@@ -12,14 +12,14 @@
  *
  ******************************************************************************/
 
+#include "dfs_format_print.h"
 #include <cassert>
 #include <climits>
+#include <cstdlib>
 #include <fstream>
 #include <iostream>
 #include <utility>
 #include <vector>
- #include <cstdlib>
-#include "dfs_format_print.h"
 using namespace std;
 
 //迷宫
@@ -62,7 +62,7 @@ void dfs(int x, int y, int step, std::vector<std::pair<int, int>> &path)
       ty = y + next_[i][1];
       if (!inMaze(tx, ty, maze_w, maze_h))
          continue;
-      
+
       if (maze[tx][ty] && !book[tx][ty])
       {
          path.push_back(std::make_pair(tx, ty));
@@ -80,9 +80,8 @@ void dfs(int x, int y, int step, std::vector<std::pair<int, int>> &path)
 int main(int argc, char const *argv[])
 {
    // 读取数据
-
    ifstream cin("dfs_find_maze.txt");
-   //ofstream cout("result.txt");
+   // ofstream cout("result.txt");
 
    cin >> maze_h >> maze_w;
    maze.resize(maze_h, std::vector<bool>(maze_w, true));

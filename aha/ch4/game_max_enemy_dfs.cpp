@@ -11,8 +11,16 @@ using namespace std;
 class Point
 {
  public:
-   Point(): x(0), y(0){}
-   Point(int _x, int _y): x(_x), y(_y){}
+   Point()
+      : x(0)
+      , y(0)
+   {
+   }
+   Point(int _x, int _y)
+      : x(_x)
+      , y(_y)
+   {
+   }
 
  public:
    int x;
@@ -57,8 +65,8 @@ int getsum(int i, int j, const char map[MAX_LEN][MAX_LEN])
 bool book[MAX_LEN][MAX_LEN]; //标记数组, 记录是否已经访问过了
 char map[MAX_LEN][MAX_LEN];  // 游戏的地图
 
-void dfs(const int startx, const int starty, const int n, const int m, 
-      int &max_enemy, Point &max_site)
+void dfs(const int startx, const int starty, const int n, const int m,
+         int &max_enemy, Point &max_site)
 {
    // 结束条件
    int sum = getsum(startx, starty, map);
