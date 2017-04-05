@@ -66,3 +66,45 @@ def Dijkstra(Graph, source):
                  Q.decrease_priority(v, alt)
      return dist[], prev[]
 ```
+
+## Bellman Ford算法
+对所有的E条**边**进行V-1次松弛操作。因为最短路径上最多有V-1条边. 第一次循环相当于经过一条边到达各个顶点的最短路径，经过k次循环相当于经过k条边到达各个顶点的最短路径。
+
+```cpp
+   for (int k = 1; k <= V - 1; k++)
+   {
+      for(int i = 1; i <= E; ++i)
+      {
+         if(dist[v[i]] > dist[u[i]] + w[i])
+            dist[v[i]] = dist[u[i]] + w[i]; 
+      }
+   }
+```
+
+除此之外，Bellman ford算法还可以用来检查是否有**负权回路**. 如果在进行V-1次松弛操作之后，仍然存在
+
+```cpp
+  if(dist[v[i]] > dist[u[i]] + w[i])
+            dist[v[i]] = dist[u[i]] + w[i]; 
+```
+
+的情况的话，也就是说V-1轮松弛之后，仍然可以松弛，那么必存在负权回路。
+
+```cpp
+   for (int k = 1; k <= V - 1; k++)
+   {
+      for(int i = 1; i <= E; ++i)
+      {
+         if(dist[v[i]] > dist[u[i]] + w[i])
+            dist[v[i]] = dist[u[i]] + w[i]; 
+      }
+   }
+   // 检查是否有负权回路
+   bool flag = false;
+   for(int i = 1; i <= E; ++i)
+   {
+      if(dist[v[i]] > dist[u[i]] + w[i])
+        flag = true; 
+   }
+   if (flag) printf("这图有负权回路\n");
+```
