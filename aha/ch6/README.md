@@ -39,3 +39,30 @@ endfor
 ## Dijkstra算法
 戴克斯特拉算法是由荷兰计算机科学家艾兹赫尔·戴克斯特拉提出。迪科斯彻算法使用了**广度优先**搜索解决赋权有向图的单源最短路径问题,算法最终得到一个最短路径树。该算法常用于路由算法或者作为其他图算法的一个子模块。
 举例来说,如果图中的顶点表示城市,而边上的权重表示城市间开车行经的距离,该算法可以用来找到两个城市之间的最短路径。该算法的输入包含了一个有权重的有向图G,以及G中的一个来源顶点S。我们以V表示G中所有顶点的集合。每一个图中的边,都是两个顶点所形成的有序元素对。(u, v) 表示从顶点u到v有路径相连。我们以E表示G中所有边的集合,而边的权重则由权重函数w: E → [0, ∞] 定义。因此,w(u, v) 就是从顶点u到顶点v的**非负权重**（weight）。边的权重可以想像成两个顶点之间的距离。任两点间路径的权重,就是该路径上所有边的权重总和。已知有V中有顶点s及t,Dijkstra算法可以找到s到t的最低权重路径(例如,最短路径)。这个算法也可以在一个图中, 找到从**一个顶点s到任何其他顶点**的最短路径。
+
+
+### 伪代码
+
+```python
+def Dijkstra(Graph, source):
+     dist[source] ← 0                 # Initialization
+     create vertex set Q
+
+     for each vertex v in Graph:           
+         if v ≠ source
+             dist[v] ← INFINITY       # Unknown distance from source to v
+             prev[v] ← UNDEFINED      # Predecessor of v
+
+         Q.add_with_priority(v, dist[v])
+
+
+     while Q is not empty:            # The main loop
+        u ← Q.extract_min()           # Remove and return best vertex
+        for each neighbor v of u:     # only v that is still in Q
+            alt ← dist[u] + length(u, v) 
+            if alt < dist[v]
+                 dist[v] ← alt
+                 prev[v] ← u
+                 Q.decrease_priority(v, alt)
+     return dist[], prev[]
+```
