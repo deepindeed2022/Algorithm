@@ -36,3 +36,11 @@
 
 ## 最小堆
 特殊的完全二叉树。完全二叉树一个性质，最后一个非叶子节点是第n/2个节点。
+
+
+## 线段树
+## Trie树(字典树)
+## 二叉搜索树
+## 红黑树(一种平衡的二叉搜索树)
+
+1. [红黑树https://en.wikipedia.org/wiki/Red%E2%80%93black_tree](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree)
