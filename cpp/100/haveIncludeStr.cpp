@@ -3,7 +3,7 @@
 using namespace std;
 typedef void(*PF_RET_VOID)(char*, const int size, int start);
 // typedef int(*PF_RET_INT)(void);
-void haveIncludeStr_method1(char* s, const int size, int start)
+void haveIncludeStr(char* s, const int size, int start)
 {
 	std::cout <<"The string:" << s << std::endl;
 	std::cout << "The size:" << size << std::endl;
