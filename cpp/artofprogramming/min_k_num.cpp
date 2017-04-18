@@ -19,6 +19,8 @@ std::vector<int> min_k_num_sort (FUNC_PARAM)
 	std::vector<int> result(test_arr.begin(), test_arr.begin()+k);
 	return result;
 }
+
+// 时间复杂度O(kn)
 std::vector<int> min_k_num_select(FUNC_PARAM)
 {
 	std::cout << __FUNCTION__;

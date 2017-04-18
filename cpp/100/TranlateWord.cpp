@@ -18,7 +18,7 @@ char* reverse(char* sourcestat,char* deststat)
 {
 	int i=0;
 	while(sourcestat[i]!='\0') if(' '==sourcestat[i]) {s.push(i);cout<<i<<" ";}
-	return NULL;
+
 	deststat = new char[i+1];
 	deststat[i]='\0';
 

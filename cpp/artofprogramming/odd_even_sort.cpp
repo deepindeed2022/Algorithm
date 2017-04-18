@@ -4,6 +4,8 @@
 #include <random>
 #include <cassert>
 #include <sys/time.h>
+using namespace std;
+
 static long get_current_time()
 {
         struct timeval tv;
@@ -11,8 +13,8 @@ static long get_current_time()
         return tv.tv_sec * 1000000 + tv.tv_usec;
 }
 
-using namespace std;
-template<typename T> //整數或浮點數皆可使用,若要使用物件(class)時必須設定大於(>)的運算子功能
+//整數或浮點數皆可使用,若要使用物件(class)時必須設定大於(>)的運算子功能
+template<typename T> 
 void odd_even_sort(T arr[], int len) {
 	int odd_even, i;
 	bool sorted = false;
@@ -64,7 +66,7 @@ long test_qsort(int length, int times)
 }
 int main(int argc, char const *argv[])
 {
-	static int MAX_NUM = 100000;
+	static int MAX_NUM = 10000;
 	std::vector<int> a(MAX_NUM, 0);
 	srand(0);
 	for(int i = 0; i<MAX_NUM; ++i) a[i] = rand()%10000;
