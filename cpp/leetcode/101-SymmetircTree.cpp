@@ -12,18 +12,20 @@ struct TreeNode {
     TreeNode(int x, TreeNode* l, TreeNode* r):val(x), left(l), right(r){}
     void free_tree(TreeNode* p, TreeNode* parent)
     {
-        if(!p)
-            return;
+        if(!p) return;
         free_tree(p->left, p);
         free_tree(p->right, p);
 
         if(parent == NULL)
+        {
             delete p;
-        else(parent->left == p)
+        }
+        else if(parent->left == p)
         {
             parent->left = NULL;
             delete p;
-        }else(parent->right == p)
+        }
+        else if (parent->right == p)
         {
             parent->right = NULL;
             delete p;
@@ -79,8 +81,8 @@ public:
         TreeNode* left, *right;
         if(!root) return true;
         std::queue<TreeNode*> q1, q2;
-        q1.push_back(root->left);
-        q2.push_back(root->right);
+        q1.push(root->left);
+        q2.push(root->right);
         while(!q1.empty() && !q2.empty())
         {
             left = q1.front();
@@ -121,11 +123,12 @@ void free_tree(TreeNode* root)
 }
 void test_isSymmetic()
 {
-
+    Solution solve;
+    TreeNode* root = init_tree();
+    std::cout <<std::boolalpha <<solve.isSymmetric(root) << std::endl;
 }
 int main(int argc, char const *argv[])
 {
-
-    std::cout << isPaliome("12321") << std::endl;
+    test_isSymmetic();
     return 0;
 }
