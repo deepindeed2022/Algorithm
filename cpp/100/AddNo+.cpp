@@ -2,9 +2,9 @@
 
 int AddWithoutArithmetic(int num1, int num2)
 {
-	if(0==num2)return num1;
-	int add1 = num1^num2;
-	int add2 = (num2&num1)<<1;
+	if(0 == num2) return num1;
+	int add1 = num1 ^ num2;
+	int add2 = (num2 & num1) << 1;
 	AddWithoutArithmetic(add1,add2);
 }
 int main(int argc,char* argv[])

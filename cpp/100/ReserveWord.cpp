@@ -7,17 +7,17 @@ using namespace std;
 ///////////////////////////////////////////////////////////////////////
 void Reverse(char *pBegin, char *pEnd)
 {
-      if(pBegin == NULL || pEnd == NULL)
-            return;
+   if (pBegin == NULL || pEnd == NULL)
+      return;
 
-      while(pBegin < pEnd)
-      {
-            char temp = *pBegin;
-            *pBegin = *pEnd;
-            *pEnd = temp;
+   while (pBegin < pEnd)
+   {
+      char temp = *pBegin;
+      *pBegin   = *pEnd;
+      *pEnd     = temp;
 
-            pBegin ++, pEnd --;
-      }
+      pBegin++, pEnd--;
+   }
 }
 
 ///////////////////////////////////////////////////////////////////////
@@ -25,50 +25,49 @@ void Reverse(char *pBegin, char *pEnd)
 // order inside a word
 // Input: pData - the sentence to be reversed
 ///////////////////////////////////////////////////////////////////////
-char* ReverseSentence(char *pData)
+char *ReverseSentence(char *pData)
 {
-      if(pData == NULL)
-            return NULL;
+   if (pData == NULL)
+      return NULL;
 
-      char *pBegin = pData;
-      char *pEnd = pData;
+   char *pBegin = pData;
+   char *pEnd   = pData;
 
-      while(*pEnd != '\0')
-            pEnd ++;
-      pEnd--;
+   while (*pEnd != '\0') pEnd++;
+   pEnd--;
 
-      // Reverse the whole sentence
-      Reverse(pBegin, pEnd);
+   // Reverse the whole sentence
+   Reverse(pBegin, pEnd);
 
-      // Reverse every word in the sentence
-      pBegin = pEnd = pData;
-      while(*pBegin != '\0')
+   // Reverse every word in the sentence
+   pBegin = pEnd = pData;
+   while (*pBegin != '\0')
+   {
+      if (*pBegin == ' ')
       {
-            if(*pBegin == ' ')
-            {
-                  pBegin ++;
-                  pEnd ++;
-                  continue;
-            }
-            // A word is between with pBegin and pEnd, reverse it
-            else if(*pEnd == ' ' || *pEnd == '\0')
-            {
-                  Reverse(pBegin, --pEnd);
-                  pBegin = ++pEnd;
-            }
-            else
-            {
-                  pEnd ++;
-            }
+         pBegin++;
+         pEnd++;
+         continue;
       }
+      // A word is between with pBegin and pEnd, reverse it
+      else if (*pEnd == ' ' || *pEnd == '\0')
+      {
+         Reverse(pBegin, --pEnd);
+         pBegin = ++pEnd;
+      }
+      else
+      {
+         pEnd++;
+      }
+   }
 
-      return pData;
+   return pData;
 }
 int main()
 {
-      char source[] = "Hello, I am a student!";
-      cout<<source<<"\n";
-      
-      cout<<ReverseSentence(source)<<"\n";
-      return 1;
+   char source[] = "Hello, I am a student!";
+   cout << source << "\n";
+
+   cout << ReverseSentence(source) << "\n";
+   return 1;
 }
