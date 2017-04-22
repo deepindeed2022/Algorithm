@@ -38,9 +38,9 @@ static int p, q; //目标的位置
 struct tNode
 {
    int x;
-   int y;
-   int f;
-   int s;
+   int y; // 记录节点的位置
+   int f; // 记录父亲节点的位置
+   int s; // 记录步数
 };
 
 void bfs(int x, int y, int p, int q, std::vector<tNode> &que)
@@ -51,12 +51,14 @@ void bfs(int x, int y, int p, int q, std::vector<tNode> &que)
    while (hidx < que.size())
    {
       struct tNode head = que[hidx];
+      // 进行周边扫描
       for (int i = 0; i < 4; ++i)
       {
          tx = head.x + next_[i][0];
          ty = head.y + next_[i][1];
          if (!inMaze(tx, ty, maze_w, maze_h))
             continue;
+         // 如果满足条件，就将节点添加到队列中
          if (maze[tx][ty] && !book[tx][ty])
          {
             struct tNode node = {tx, ty, hidx, head.s + 1};
@@ -75,7 +77,7 @@ void bfs(int x, int y, int p, int q, std::vector<tNode> &que)
       hidx++;
    }
 }
-void path_gen(std::vector<tNode> &que, std::vector<std::pair<int, int>> &path)
+void path_gen(const std::vector<tNode> &que, std::vector<std::pair<int, int>> &path)
 {
    struct tNode node = que[que.size() - 1];
    while (node.f != -1)
@@ -89,7 +91,6 @@ void path_gen(std::vector<tNode> &que, std::vector<std::pair<int, int>> &path)
 int main(int argc, char const *argv[])
 {
    // 读取数据
-
    ifstream cin("dfs_find_maze.txt");
    // ofstream cout("result.txt");
 
@@ -111,9 +112,13 @@ int main(int argc, char const *argv[])
    cout << " startx:" << startx << " starty: " << starty << std::endl;
    cout << " endx:" << p << " endy: " << q << std::endl;
    cout << " maze_h:" << maze_h << " maze_w: " << maze_w << std::endl;
+
+   // 用来作为中间存放队列
    std::vector<tNode> allnode;
    allnode.clear();
+   
    allnode.push_back((struct tNode){startx, starty, -1, 0});
+   
    // 走迷宫
    bfs(startx, starty, p, q, allnode);
 

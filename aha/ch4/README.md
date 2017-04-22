@@ -2,6 +2,23 @@
 1. 本篇中涉及到基本的输入输出包含C++和C的输入输出方式。
 C: game_max_enemy_dfs.cpp
 C++: dfs_find_maze.cpp
+
+## bfs_find_maze.cpp
+
+     startx:0 starty: 0
+     endx:3 endy: 2
+     maze_h:5 maze_w: 4
+     min_step:7
+     step list:
+      (0 0) -> (0 1) -> (1 1) -> (1 2) -> (1 3) -> (2 3) -> (3 3) -> (3 2)
+           0  1  2  3  
+         0 *  *  -  -  
+         1 -  *  *  *  
+         2 -  -  -  *  
+         3 -  -  *  *  
+         4 -  -  -  - 
+
+
 2. 深度优先和广度优先遍历算法
 - dfs
 - bfs
