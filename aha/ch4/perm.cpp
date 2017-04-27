@@ -76,13 +76,21 @@ void dfs(std::vector<int> &a, std::vector<bool> &book, int step, const int n)
 }
 int main(int argc, char const *argv[])
 {
-   // for(int i = 0; i < 3; ++i) a[i] = i+1;
-   // perm_backtrack(a, 3);
-   // for(int i = 0; i < 3; ++i) a[i] = i+1;
-   // perm_fast(a, 3);
-   const int n = 3;
    std::vector<int> a(3, 0);
+
+   const int n = 3;
+   for(int i = 0; i < 3; ++i) a[i] = i+1;
+   perm_backtrack(a, 3);
+   
+   std::cout << std::endl << std::endl;
+   for(int i = 0; i < 3; ++i) a[i] = i+1;
+   perm_fast(a, 3);
+   
+   std::cout << std::endl << std::endl;
+
+   for(int i = 0; i < 3; ++i) a[i] = i+1;
    std::vector<bool> book(3, false);
    dfs(a, book, 0, 3);
+   std::cout << std::endl << std::endl;
    return 0;
 }
