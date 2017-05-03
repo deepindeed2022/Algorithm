@@ -5,7 +5,7 @@ using namespace std;
 void rotate(std::vector< std::vector<int> >& mat)
 {
     const int n = mat.size();
-    // 沿着对角线进行反转一次
+    // 沿着副对角线进行对折一次
     for(int i = 0; i < n; ++i)
     {
         for(int j= 0; j < n-i; ++j )
