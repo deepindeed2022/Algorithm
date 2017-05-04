@@ -6,6 +6,7 @@ using namespace std;
 vector<int> constructRectangle(int area) 
 {
     vector<int> res;
+    // 构造尽可能接近正方形的长方形，面积是
     for(int i = floor(sqrt(area)); i <= area; ++i)
     {
         int w = area/i;
@@ -20,9 +21,7 @@ vector<int> constructRectangle(int area)
 }
 int main(int argc, char const *argv[])
 {
-    for(auto i: constructRectangle(5))
-    {
-        std::cout << i << " ";
-    }
+    for(auto i: constructRectangle(5)) std::cout << i << " "; std::cout << std::endl;
+    for(auto i: constructRectangle(12)) std::cout << i <<" "; std::cout << '\n';
     return 0;
 }
