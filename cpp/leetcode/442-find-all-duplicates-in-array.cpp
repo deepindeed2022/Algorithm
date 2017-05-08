@@ -35,12 +35,15 @@ vector<int> findDuplicates(vector<int>& nums) {
 }
 int main(int argc, char const *argv[])
 {
-	int a[] = {3,2,5,4,3};
-	int a[] = {};
+	int a[] = {1,2,5,4,1};
 	vector<int> aa(a, a+5);
 	for(auto i : findDuplicates(aa))
 	{
 		std::cout << i << std::endl;
+	}	
+	for(auto i : aa)
+	{
+		std::cout << i << " ";
 	}
 	return 0;
 }
