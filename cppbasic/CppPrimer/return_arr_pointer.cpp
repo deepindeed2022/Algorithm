@@ -13,12 +13,13 @@ void* func_new(const int size)
 }
 void* func_arr()
 {
-	int a[100];
+	int** a;
+	*a = new [100];
 	for (int i = 0; i < 100; ++i)
 	{
 		a[i] = 0;
 	}
-	return (void*)a;
+	return (void**)a;
 }
 int main(int argc, char const *argv[])
 {

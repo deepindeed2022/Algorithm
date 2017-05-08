@@ -18,6 +18,7 @@ public:
             virtual void f() { cout << "Base3::f" << endl; }
             virtual void g() { cout << "Base3::g" << endl; }
             virtual void h() { cout << "Base3::h" << endl; }
+            virtual void i() { cout << "Base3::i" << endl; }
 
 };
 class Derive : public Base1, public Base2, public Base3 {
@@ -48,7 +49,7 @@ int main()
             pFun();
             //The tail of the vtable
             pFun = (Fun)pVtab[0][4];
-            cout<<pFun<<endl;
+            cout<<pFun <<  "  " <<&pFun<<endl;
             //Base2's vtable
             //pFun = (Fun)*((int*)*(int*)((int*)&d+1)+0);
             pFun = (Fun)pVtab[1][0];
@@ -61,6 +62,7 @@ int main()
             pFun();
             //The tail of the vtable
             pFun = (Fun)pVtab[1][3];
+
             cout<<pFun<<endl;
             //Base3's vtable
             //pFun = (Fun)*((int*)*(int*)((int*)&d+1)+0);
@@ -71,8 +73,11 @@ int main()
             pFun();
             pFun = (Fun)pVtab[2][2];
             pFun();
-            //The tail of the vtable
             pFun = (Fun)pVtab[2][3];
+            pFun();
+            //The tail of the vtable
+            pFun = (Fun)pVtab[2][4];
+            //pFun();
             cout<<pFun<<endl;
            return 0;
 }
