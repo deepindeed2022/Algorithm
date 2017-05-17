@@ -23,6 +23,9 @@ bool wordBreak(string s, unordered_set<string>& dict)
 }
 int main(int argc, char const *argv[])
 {
-	
+	unordered_set<string> dict;
+	dict.insert("leet");
+	dict.insert("code");
+	std::cout << wordBreak("leetcode", dict);
 	return 0;
 }
