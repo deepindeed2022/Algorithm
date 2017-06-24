@@ -5,7 +5,6 @@ class Solution:
        	if number <= 2:
        		return number
        	else:
-       		# return rectCover(n - 1) + rectCover(n -2)
        		a = 1
        		b = 2
        		for i in xrange(number -1):
