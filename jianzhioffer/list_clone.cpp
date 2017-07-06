@@ -22,6 +22,7 @@ public:
     RandomListNode* Clone(RandomListNode* pHead)
     {
         if(!pHead) return NULL;
+        // 复制节点，让后插入到原来节点的后面    
         RandomListNode* currNode = pHead;
         while(currNode)
         {
@@ -31,6 +32,7 @@ public:
         	// 在原list中走
         	currNode = node->next;
         }
+        // 遍历链表，复制random指针
         currNode = pHead;
         while(currNode)
         {
@@ -42,7 +44,7 @@ public:
         	currNode = node->next;
         }
 
-
+        // 拆开链表
 		RandomListNode *pCloneHead = pHead->next;
         RandomListNode *tmp;
         currNode = pHead;
