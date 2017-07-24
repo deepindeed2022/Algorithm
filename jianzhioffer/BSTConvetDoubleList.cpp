@@ -1,4 +1,12 @@
-
+/***************************************************************************
+ *
+ * 将一颗二叉树转化为双向链表的操作
+ * 思路：
+ * 采用中序遍历的想法的，对二叉树进行中序遍历，遍历过程就是最终的结果过程，然后将
+ * 前后进行指针的重新设置即可。
+ * 本题目主要考察递归和指针的操作
+ *
+ **************************************************************************/
 struct TreeNode {
 	int val;
 	struct TreeNode *left;
@@ -22,7 +30,7 @@ public:
     TreeNode* ConvertNode(TreeNode* root)
     {
         if(root == NULL) return root;
-		//
+		// 中序遍历左子树
         if(root->left)
         {
             TreeNode *left = ConvertNode(root->left);
@@ -30,7 +38,7 @@ public:
             left->right = root;
             root->left = left;
         }
-         
+        // 中序遍历右子树
         if(root->right)
         {
             TreeNode *right = ConvertNode(root->right);
