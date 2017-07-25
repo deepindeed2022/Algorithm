@@ -10,22 +10,25 @@ class Solution {
 public:
     ListNode* Merge(ListNode* pHead1, ListNode* pHead2)
     {
-        if(pHead1 == NULL) return pHead2;
-        else if(pHead2 == NULL) return pHead1;
+        if(pHead1 == NULL) 
+            return pHead2;
+        else if(pHead2 == NULL) 
+            return pHead1;
         else
         {
             ListNode* head = NULL;
             ListNode* curr = NULL;
-            if(pHead1->val > pHead2->val) 
-            {
-                head = pHead2;
-                pHead2 = pHead2->next;
-            }
-            else 
-            {
-                head = pHead1;
-                pHead1 = pHead1->next;
-            }
+            // 更好的解决方案是采用一个空的头结点的方式, 那么就可以统一进行处理了
+            // if(pHead1->val > pHead2->val) 
+            // {
+            //     head = pHead2;
+            //     pHead2 = pHead2->next;
+            // }
+            // else 
+            // {
+            //     head = pHead1;
+            //     pHead1 = pHead1->next;
+            // }
             curr = head;
             while(pHead1 && pHead2)
             {
@@ -49,7 +52,7 @@ public:
             {
                 curr->next = pHead2;
             }
-            return head;
+            return head->next;
         }
         
     }
