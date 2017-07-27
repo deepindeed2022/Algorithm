@@ -6,7 +6,7 @@ using namespace std;
 class Solution
 {
  public:
-   bool Find(int target, vector<vector<int>> array)
+   bool Find(int target, vector<vector<int> >& array)
    {
       if (array.empty())
          return false;
@@ -43,7 +43,7 @@ class Solution
 class Solution2
 {
  public:
-   bool Find(int target, vector<vector<int>> array)
+   bool Find(int target, vector<vector<int> >& array)
    {
       if (array.empty()) //注意空的数组!!!!!
       {
@@ -76,7 +76,7 @@ class Solution2
 };
 int main(int argc, char const *argv[])
 {
-   std::vector<vector<int>> v(3, vector<int>(3, 0));
+   std::vector<vector<int> > v(3, vector<int>(3, 0));
    v[0][0] = 1;
    v[0][1] = 2;
    v[0][2] = 3;
@@ -86,8 +86,8 @@ int main(int argc, char const *argv[])
    v[2][0] = 7;
    v[2][1] = 8;
    v[2][2] = 9;
-   Solution solve;
-   std::cout << solve.Find(10, v);
+   Solution2 solve;
+   std::cout <<  boolalpha  << solve.Find(4, v) << std::endl;
    return 0;
 }
 
