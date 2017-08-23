@@ -26,23 +26,27 @@
 using namespace std;
 
 //迷宫
-static std::vector<std::vector<bool>> maze;
+static std::vector<std::vector<bool> > maze;
 //迷宫的长宽
 static int maze_h, maze_w;
 //标记是否走过了
-static std::vector<std::vector<bool>> book;
+static std::vector<std::vector<bool> > book;
 // 初始位置和目标位置
 static int startx, starty;
 static int p, q; //目标的位置
 
 struct tNode
 {
-   int x;
-   int y; // 记录节点的位置
+   int x; // 记录节点的位置x
+   int y; // 记录节点的位置y
    int f; // 记录父亲节点的位置
    int s; // 记录步数
 };
-
+/**
+ * x, y : 起始节点的位置
+ * p, q : 目标节点
+ * que: 记录访问节点的顺序
+ **/
 void bfs(int x, int y, int p, int q, std::vector<tNode> &que)
 {
    int hidx = 0;
@@ -77,7 +81,7 @@ void bfs(int x, int y, int p, int q, std::vector<tNode> &que)
       hidx++;
    }
 }
-void path_gen(const std::vector<tNode> &que, std::vector<std::pair<int, int>> &path)
+void path_gen(const std::vector<tNode> &que, std::vector<std::pair<int, int> > &path)
 {
    struct tNode node = que[que.size() - 1];
    while (node.f != -1)
@@ -93,10 +97,11 @@ int main(int argc, char const *argv[])
    // 读取数据
    ifstream cin("dfs_find_maze.txt");
    // ofstream cout("result.txt");
-
+   // 读取棋盘大小
    cin >> maze_h >> maze_w;
    maze.resize(maze_h, std::vector<bool>(maze_w, true));
    book.resize(maze_h, std::vector<bool>(maze_w, false));
+   // 声明临时变量，用来输入数据
    int c;
    for (int i = 0; i < maze_h; ++i)
       for (int j = 0; j < maze_w; ++j)
@@ -104,9 +109,10 @@ int main(int argc, char const *argv[])
          cin >> c;
          maze[i][j] = (c == 0);
       }
+   // 输入起始位置和目标位置
    cin >> startx >> starty >> p >> q;
 
-   //检查输入
+   //输入检查输入
    assert(p < maze_h && p >= 0);
    assert(q < maze_w && q >= 0);
    cout << " startx:" << startx << " starty: " << starty << std::endl;
@@ -122,7 +128,7 @@ int main(int argc, char const *argv[])
    // 走迷宫
    bfs(startx, starty, p, q, allnode);
 
-   std::vector<std::pair<int, int>> path;
+   std::vector<std::pair<int, int> > path;
    path_gen(allnode, path);
    //结果输出
    cout << " min_step:" << (*allnode.rbegin()).s << std::endl
