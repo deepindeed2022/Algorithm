@@ -1,8 +1,7 @@
 from collections import Counter
 def minimumSubstring(s, alphabet):
-    
     need, missing = Counter(alphabet), len(alphabet)
-    i = I = J = 0
+    i = start = end = 0
     # moving the right point to find all the need characters
     for j, c in enumerate(s, 1):
         # print j, c
@@ -13,10 +12,12 @@ def minimumSubstring(s, alphabet):
             while i < j and need[s[i]] < 0:
                 need[s[i]] += 1
                 i += 1
-
-            if not J or j - i <= J - I:
-                I, J = i, j
-    return s[I:J]
+                # print need
+                # print s[i]
+            if not end or j - i <= end - start:
+                start, end = i, j
+                print start, end
+    return s[start:end]
 
 s = "ADOBECODEBANC"
 t = "ABC"

@@ -40,7 +40,8 @@ def dijkstra(edges, from_node, to_node):
     ret_path = []
     length, path_queue = dijkstra_raw(edges, from_node, to_node)
     if len(path_queue) > 0:
-        len_shortest_path = length  # 1. Get the length firstly;
+    	# 1. Get the length firstly
+        len_shortest_path = length  
         # 2. Decompose the path_queue, to get the passing nodes in the shortest
         # path.
         left = path_queue[0]
