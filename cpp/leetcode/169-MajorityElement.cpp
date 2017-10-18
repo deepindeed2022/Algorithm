@@ -1,3 +1,6 @@
+/**
+ * 数组中有的元素超过一半，如何找出这个元素
+ **/
 #include <vector>
 #include <string>
 #include <iostream>

@@ -33,20 +33,29 @@ int findComplement(int num) {
 int findComplement_1(int num)
 {
 	unsigned mask = ~0;
-	while(num & mask) mask <<= 1;
+	//std::cout << hex << mask << std::endl;
+	while(num & mask) 
+	{
+		mask <<= 1;
+	//	std::cout << mask << std::endl;
+	}
+	
+	std::cout << hex << num << std::endl;
+	std::cout << ~mask << std::endl;
 	return num ^ ~mask;
 }
 
 int main(int argc, char const *argv[])
 {
-	assert(findComplement_1(1) == 0);
-	assert(findComplement_1(5) == 2);
+	// assert(findComplement_1(1) == 0);
+	// assert(findComplement_1(5) == 2);
+	std::cout << findComplement_1(0x12323424) << std::endl;
 
-	assert(findComplement(1) == 0);
-	assert(findComplement(5) == 2);
+	// assert(findComplement(1) == 0);
+	// assert(findComplement(5) == 2);
 
-	assert(findComplement_2(1) == 0);
-	assert(findComplement_2(5) == 2);
+	// assert(findComplement_2(1) == 0);
+	// assert(findComplement_2(5) == 2);
 
 	return 0;
 }
