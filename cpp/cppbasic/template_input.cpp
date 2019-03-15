@@ -1,11 +1,9 @@
 #include <iostream>
 #include <fstream>
 using namespace std;
-int main(int argc, char* argv[])
+int main()
 { 
-	//提交代码之前，请将该行代码注释掉
 	std::ifstream cin("testcase.txt");
-
 	int n = 0;
 	int temp = 0;
 	cin >> n;

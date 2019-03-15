@@ -4,13 +4,14 @@
 #include <vector>
 #include <cassert>
 using namespace std;
+// DP algo
 bool wordBreak(string s, unordered_set<string>& dict)
 {
 	vector<bool> f(s.size() + 1, false);
 	f[0] = true;
 	for(int i = 1; i <= s.size(); ++i)
 	{
-		for(int j = i -1; j >= 0; --j)
+		for(int j = i - 1; j >= 0; --j)
 		{
 			if(f[j] && dict.find(s.substr(j, i-j)) != dict.end())
 			{
@@ -21,6 +22,7 @@ bool wordBreak(string s, unordered_set<string>& dict)
 	}
 	return f[s.size()];
 }
+
 static bool dfs(const string &s, unordered_set<string>& dict,
 				size_t start, size_t cur)
 {

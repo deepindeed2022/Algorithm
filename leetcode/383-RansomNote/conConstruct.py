@@ -12,5 +12,6 @@ def test_canConstruct():
     solve = Solution()
     assert solve.canConstruct("aa", "ab") == False
     assert solve.canConstruct("abab", "abababababa") == True
+    
 if __name__ == '__main__':
     test_canConstruct()
