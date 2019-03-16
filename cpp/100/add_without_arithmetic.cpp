@@ -1,16 +1,17 @@
 #include <stdio.h>
 
-int AddWithoutArithmetic(int num1, int num2)
+int add_without_arithmetic(int num1, int num2)
 {
 	if(0 == num2) return num1;
 	int add1 = num1 ^ num2;
 	int add2 = (num2 & num1) << 1;
-	AddWithoutArithmetic(add1,add2);
+	fprintf(stderr, "%d %d\n", add1, add2);
+	add_without_arithmetic(add1, add2);
 }
-int main(int argc,char* argv[])
-{
-	printf("%d\n",AddWithoutArithmetic(5,17) );
-	//return 1;
+
+int main(int argc,char* argv[]) {
+	fprintf(stderr, "%d\n", add_without_arithmetic(5,17));
+	return 0;
 }
 /**
  *  题目：写一个函数，求两个整数的之和，要求在函数体内不得使用＋、－、×、÷。

@@ -1,48 +1,51 @@
+//数对之差是一个数字减去它右边的数字。
 #include <fstream>
 #include <iostream>
 using namespace std;
-//数对之差是一个数字减去它右边的数字。
-const char infile[] = "input.txt";
-/**
- *
- */
-int maxDiff_1(int* start, int* end, int& max, int& min);
+
 int maxDiff_1(int arr[], const int length);
 int maxDiff_2(int arr[], const int length);
 int maxDiff_3(int arr[], const int length);
 
 int main(int argc, char const* argv[]) {
-  ifstream cin(infile);
-  int size = 0;
-  cin >> size;
-  int* arr = new int[size];
-  for (unsigned int i = 0; i < size; ++i) cin >> arr[i];
-  cout << "Max Different in array:" << maxDiff_2(arr, size) << "\n";
-  delete[] arr;
-  return 0;
-}
-int maxDiff_1(int* start, int* end, int& max, int& min) {
-  if (start == end) {
-    max = min = *start;
-    return 0x80000000;
-  }
-  int* middle = start + ((end - start) / 2);
-  int leftmax = 0, leftmin = 0;
-  int leftdiff = maxDiff_1(start, middle, leftmax, leftmin);
-  int rightmax = 0, rightmin = 0;
-  int rightdiff = maxDiff_1(middle + 1, end, rightmax, rightmin);
-  int crossDiff = leftmax - rightmin;
-  max = (rightmax > leftmax) ? rightmax : leftmax;
-  min = (rightmin > leftmin) ? leftmin : rightmin;
+	const char infile[] = "input.txt";
+	ifstream cin(infile);
+	int size = 0;
+	cin >> size;
+	int* arr = new int[size];
+	for (unsigned int i = 0; i < size; ++i) cin >> arr[i];
+	cin.close();
+	cout << "Max Different in array:" << maxDiff_1(arr, size) << "\n";
+	cout << "Max Different in array:" << maxDiff_2(arr, size) << "\n";
+	cout << "Max Different in array:" << maxDiff_3(arr, size) << "\n";
 
-  int maxdiff = (crossDiff > leftdiff) ? crossDiff : leftdiff;
-  maxdiff = (maxdiff > rightdiff) ? maxdiff : rightdiff;
-  return maxdiff;
+	delete[] arr;
+	return 0;
 }
+
+static inline int maxDiff_1(int* start, int* end, int& max, int& min) {
+	if (start == end) {
+		max = min = *start;
+		return 0x80000000;
+	}
+	int* middle = start + ((end - start) / 2);
+	int leftmax = 0, leftmin = 0;
+	int leftdiff = maxDiff_1(start, middle, leftmax, leftmin);
+	int rightmax = 0, rightmin = 0;
+	int rightdiff = maxDiff_1(middle + 1, end, rightmax, rightmin);
+	int crossDiff = leftmax - rightmin;
+	max = (rightmax > leftmax) ? rightmax : leftmax;
+	min = (rightmin > leftmin) ? leftmin : rightmin;
+
+	int maxdiff = (crossDiff > leftdiff) ? crossDiff : leftdiff;
+	maxdiff = (maxdiff > rightdiff) ? maxdiff : rightdiff;
+	return maxdiff;
+}
+
 int maxDiff_1(int arr[], const int length) {
-  if (NULL == arr || length < 2) return 0;
-  int min, max = 0;
-  return maxDiff_1(arr, arr + length - 1, max, min);
+	if (NULL == arr || length < 2) return 0;
+	int min, max = 0;
+	return maxDiff_1(arr, arr + length - 1, max, min);
 }
 /**
  *
@@ -57,24 +60,24 @@ int maxDiff_1(int arr[], const int length) {
  *
  */
 int maxDiff_2(int arr[], const int length) {
-  if (NULL == arr || length < 2) return 0;
-  int* diff = new int[length - 1];
-  //
-  for (unsigned int i = 1; i < length; i++) {
-    diff[i - 1] = arr[i - 1] - arr[i];
-  }
-  // get max sequense addition result
-  int currentSum = 0;
-  int greatestSum = 0x80000000;
-  for (unsigned int i = 0; i < length - 1; i++) {
-    if (currentSum >= 0)
-      currentSum += diff[i];
-    else
-      currentSum = diff[i];
-    if (currentSum > greatestSum) greatestSum = currentSum;
-  }
-  delete[] diff;
-  return greatestSum;
+	if (NULL == arr || length < 2) return 0;
+	int* diff = new int[length - 1];
+	//
+	for (unsigned int i = 1; i < length; i++) {
+		diff[i - 1] = arr[i - 1] - arr[i];
+	}
+	// get max sequense addition result
+	int currentSum = 0;
+	int greatestSum = 0x80000000;
+	for (unsigned int i = 0; i < length - 1; i++) {
+		if (currentSum >= 0)
+			currentSum += diff[i];
+		else
+			currentSum = diff[i];
+		if (currentSum > greatestSum) greatestSum = currentSum;
+	}
+	delete[] diff;
+	return greatestSum;
 }
 /**
  * 既然我们可以把求最大的数对之差转换成求子数组的最大和，而子数组的最大和可以通过动态规划求解，

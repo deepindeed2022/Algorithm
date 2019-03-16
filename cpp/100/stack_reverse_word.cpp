@@ -9,37 +9,55 @@
 	还是以上面的输入为例子。翻转“I am a student.”中所有字符得到“.tneduts a ma I”，
 	再翻转每个单词中字符的顺序得到“students. a am I”，正是符合要求的输出。
  */
+#include <cstring>
+
 #include <iostream>
-using std::cout;
 #include <stack>
+using std::cout;
 using std::stack;
+#include <assert.h>
 static std::stack<int> s;
-char* reverse(char* sourcestat,char* deststat)
+
+char* reverse(char* sourcestat, char* deststat)
 {
-	int i=0;
-	while(sourcestat[i]!='\0') if(' '==sourcestat[i]) {s.push(i);cout<<i<<" ";}
-
-	deststat = new char[i+1];
-	deststat[i]='\0';
-
-	int start=0; int j;
-	while(!s.empty())
-	{
-	    j=s.top();
-	    s.pop();
-		for(int k=j+1;k<i;)deststat[start++]=sourcestat[k++];
-
-		deststat[start++]=' ';
-		i=j;
+	// first word preindex is -1
+	s.push(-1);
+	int i = 0;
+	while(sourcestat[i] != '\0') {
+		if(' '==sourcestat[i]) {
+			s.push(i); 
+		}
+		i++;
 	}
+	// word start every word
+	int j;
+	// init the end of dst 
+	deststat[i] = '\0';
+	int start = 0; 
+	while(!s.empty()) {
+		j = s.top();
+		s.pop();
+		memcpy(deststat+start, sourcestat+j+1,  i - j);
+		start += i - j;
+		deststat[start-1] = ' '; 
+		i = j;
+	}
+
 	return deststat;
 }
-int main()
-{
+
+int main() {
 	char source[] = "Hello, I am a student!";
-	cout<<source<<"\n";
-	char* dest;
-	reverse(source,dest);
-	cout<<reverse(source,dest)<<"\n";
-	return 1;
+	fprintf(stderr, "sizeof(\"%s\") = %ld\n", source, sizeof(source));
+	char* dest = new char[sizeof(source)+1];
+	fprintf(stderr, "%s\n", reverse(source, dest));
+	delete [] dest;
+
+	char source2[] = "Yeah, your are beautiful!!!";
+	fprintf(stderr, "sizeof(\"%s\") = %ld\n", source2, sizeof(source2));
+	char* dest2 = new char[sizeof(source2)+1];
+	fprintf(stderr, "%s\n", reverse(source2, dest2));
+	delete [] dest2;
+	
+	return EXIT_SUCCESS;
 }
