@@ -41,6 +41,7 @@ void matrix_chain(int* p,const int n, int **m, int **s)
 			}
 		}
 }
+
 void track_back(int i, int j, int **s)
 {
 	if(i == j) return;
@@ -49,6 +50,7 @@ void track_back(int i, int j, int **s)
 	std::cout << "multiply A "<< i <<","<<s[i][j];
 	std::cout << " and A " <<(s[i][j]+1)<<","<<j<<std::endl;
 }
+
 int main(int argc, char const *argv[])
 {
 	std::cout << "--start\n";
