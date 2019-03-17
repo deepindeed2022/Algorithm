@@ -1,4 +1,4 @@
-#include "stdheader.h"
+#include <unordered_map>
 
 using std::unordered_map;
 
@@ -32,6 +32,7 @@ private:
             return NULL;
         }
     }
+    // 
     void insertToTail(BlockNode * ptr)
     {
         BlockNode * prev = tail -> prev;
@@ -75,9 +76,7 @@ public:
         if(NULL == ptr)
         {
             return -1;
-        }
-        else
-        {
+        } else {
             moveToTail(ptr);
             return ptr -> val;
         }
@@ -114,3 +113,10 @@ public:
         }
     }
 };
+
+/***
+step1:  head -> tail
+           | <- |
+step2:
+
+ ***/

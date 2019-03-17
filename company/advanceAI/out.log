@@ -1,0 +1,8 @@
+Input n, m
+Input nodes: [nodename  value]
+A 1
+C 2
+B 2
+['A', 'C', 'B']
+Input edges: [headnode  tailnode]
+Max value is:5

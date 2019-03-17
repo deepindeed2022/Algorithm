@@ -12,13 +12,14 @@
 
 def mini_op_price(arr, k):
 	size = len(arr)
-	avg = sum(arr)/float(size)
+	avg = (min(arr) + max(arr)) >> 1
 	for i in xrange(size):
 		if arr[i] < avg:
 			arr[i] += k
 		else:
 			arr[i] -= k
 	return max(arr) - min(arr)
+
 
 
 if __name__ == '__main__':

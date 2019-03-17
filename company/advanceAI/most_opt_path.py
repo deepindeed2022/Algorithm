@@ -93,6 +93,6 @@ def main():
 	max_node_weight_path(Nodes, Edges, start)
 
 if __name__ == '__main__':
-	# sys.stdin = open('input.dat')
-	# sys.stdout = open("out.log", "w+")
+	sys.stdin = open('input.dat')
+	sys.stdout = open("out.log", "w+")
 	main()
