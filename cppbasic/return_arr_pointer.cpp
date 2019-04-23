@@ -1,5 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
 void* func_new(const int size)
 {
@@ -13,21 +14,22 @@ void* func_new(const int size)
 }
 void* func_arr()
 {
-	int** a;
-	*a = new [100];
-	for (int i = 0; i < 100; ++i)
-	{
-		a[i] = 0;
-	}
+	int** a = (int**)new int[1];
+	*a = new int[100];
+	memset(*a, 0, 100*sizeof(int));
+
 	return (void**)a;
 }
 int main(int argc, char const *argv[])
 {
-	int* a = (int*)func_arr();
-	printf("%d\n", &a);
+	int** a = (int**)func_arr();
+
 	for (int i = 0; i < 100; ++i)
 	{
-		printf("%d ", a[i]);
+		printf("%d ", (*a)[i]);
 	}
+	printf("\n");
+	delete []*a;
+	delete []a;
 	return 0;
 }

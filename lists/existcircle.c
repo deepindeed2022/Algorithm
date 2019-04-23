@@ -8,7 +8,7 @@ struct ListNode {
    ~ListNode() { delete next; }
 };
 
-void initCircleList(ListNode **head);
+void init_circle_list(ListNode **head);
 void initNoCircleList(ListNode **head);
 void free_list(ListNode **head);
 bool existCircle(ListNode *llist);
@@ -18,12 +18,12 @@ int main(int argc, char const *argv[]) {
    assert(false == existCircle(h));
 
    // h = NULL;
-   initCircleList(&h);
+   init_circle_list(&h);
    assert(true == existCircle(h));
 
    return 0;
 }
-void initCircleList(ListNode **head) {
+void init_circle_list(ListNode **head) {
    ListNode *temp = new ListNode(1);
 
    *head = temp;
