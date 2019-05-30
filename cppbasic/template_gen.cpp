@@ -2,7 +2,7 @@
  * @description: This is a template generator for CPP file.
  *				 You could only input your function name, you will 
  *				 get a functionname.cpp and some template function.
- * @author: Clython
+ * @author: wenlong.cao
  * @create date: 2016-10-30
  *
  **/
@@ -43,7 +43,7 @@ int main(int argc, char const *argv[])
 		filename.append(".cpp");
 	  	fs.open(filename.c_str(), std::ofstream::out);
 	  	fs << "/**\n"
-		   << "* @author: Clython \n"
+		   << "* @author: wenlong.cao \n"
 		   << "* @description: The file description.\n";
 		fs <<"* @create Date:";
 		fs << today() << "\n**/\n";

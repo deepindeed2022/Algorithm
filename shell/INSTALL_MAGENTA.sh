@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Test the fuchsia kernal magenta in Linux ubuntu 4.4.0-34-generic x86_64 x86_64 x86_64 GNU/Linux for Ubuntu16.04LTS
-# BY: wenlong@nfs.iscas.ac.cn
+# BY: wenlong.cao
 # Date: 2016-9-27
 
 # Prepare dependencies package in ubuntu

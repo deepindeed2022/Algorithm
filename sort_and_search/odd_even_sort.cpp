@@ -1,3 +1,7 @@
+/**********************************************************************
+/* test qsort and odd_even_sort performance
+/* author: wenlong.cao
+/*********************************************************************/
 #include <algorithm>
 #include <iostream>
 #include <vector>

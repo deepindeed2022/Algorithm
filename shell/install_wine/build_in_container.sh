@@ -3,7 +3,7 @@
 ###################### IN CONTAINER ####################################
 # The wine source should be set in the host machine
 # before runing this script, you should have executed the install_wine.sh
-# Author: Clython
+# Author: wenlong.cao
 # Date: 2016-10-26
 
 # set base dir before runing

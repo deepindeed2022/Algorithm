@@ -1,5 +1,5 @@
 /**
- * @author: Clython
+ * @author: wenlong.cao
  * @file: Define a left shift string function. The time compleity should O(n) and 
  *		  Space complexity should be O(1)
  * @date: 2016-10-31

@@ -1,4 +1,7 @@
-// nth_element example
+/**********************************************************************
+/* test std::nth_element example
+/* author: wenlong.cao
+/*********************************************************************/
 #include <iostream>     // std::cout
 #include <algorithm>    // std::nth_element, std::random_shuffle
 #include <vector>       // std::vector

@@ -1,6 +1,6 @@
-/**
-* @author: Clython 
+﻿/**
 * @description: RandomSelect Kth min from a array.
+* @author: wenlong.cao 
 * @create Date:2016-11-1
 **/
 #include <iostream>
@@ -40,7 +40,7 @@ int randomselect (FUNC_PARAM)
 		return 	A[start];
 	int q = random_partition(A, start, end);
 	int k = q - start + 1;
-	if(i <= 0)　i = 1;　// handle the special case i out of low bound
+	if(i <= 0) i = 1; // handle the special case i out of low bound
 	if(k == i)
 		return A[q];
 	else if(i < k)
