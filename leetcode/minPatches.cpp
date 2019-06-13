@@ -16,9 +16,10 @@ int minPatches(vector<int>& nums, int n) {
 int main()
 {
 	vector<int> a;
-	a.insert(1,1);
-	a.insert(2,3);
+    a.insert(a.end(), 2);
+	a.insert(a.end(), 3);
 	int n = 6;
 	
-	std::cout<<minPatches(a, n)<<std::endl;
+	std::cout<< minPatches(a, n) <<std::endl;
+    return EXIT_SUCCESS;
 }
