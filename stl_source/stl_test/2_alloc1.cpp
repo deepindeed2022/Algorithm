@@ -14,7 +14,7 @@ int main(int argc, char const *argv[])
 	std::cout << t << std::endl;
 	std::cout << sizeof(t) <<std::endl;
 	std::cout << "Hello" <<endl;
-	std::vector<int, std::allocator> vec(3, 0);
+	std::vector<int> vec(3, 0);
 
 	return 0;
 }

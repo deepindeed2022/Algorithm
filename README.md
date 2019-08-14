@@ -24,16 +24,77 @@
 ## 多敲胜于多想，多用胜于多读
 毕竟算法要用于实践，我们的算法再怎么棒，不能实现也是空谈罢了。算法是个实战主义者。
 
-## C++ Practise
+# C++ Practise
 C++ is a great program language. But it's difficult for
 me to learn deeply. So more practise should be do.
 
-### Boost libary
-Boost libary have some great idea for programmer to learn.
-
-### OpenCV
-Using opencv, digital image process API.
-Feature extraction, image transform
-
-### Internet basic
-* Socket programming
+```
+.
+├── cppbasic
+│   ├── add_without_arithmetic.cpp
+│   ├── alignPtr.cpp
+│   ├── datatype.cpp
+│   ├── func_neq_func.cpp
+│   ├── gcd.cpp
+│   ├── leftshiftchar.cpp
+│   ├── memcpy.cpp
+│   ├── no_if.cpp
+│   ├── perm.cpp
+│   ├── p_func_test.cpp
+│   ├── powerlogn.cpp
+│   ├── README.md
+│   ├── return_arr_pointer.cpp
+│   ├── revert_int32.cpp
+│   ├── template.cpp
+│   ├── template_gen.cpp
+│   ├── template_input.cpp
+│   ├── transform_demo.cpp
+│   ├── unexceptedexception.cpp
+│   ├── virtualTable.cpp
+│   └── VirtualTest.cpp
+├── dp
+│   ├── matrix_multiply
+│   ├── max_num_pair_diff
+│   └── wordbreak
+├── lists
+│   ├── existcircle.c
+│   └── reverseList.cpp
+├── python
+│   ├── 1-add2sum.py
+│   ├── 46-Permutations.py
+│   ├── cache_result_decorator.py
+│   ├── calc_PI.py
+│   ├── Divide-And-Conquer.py
+│   ├── find_target_sum.py
+│   ├── longestIncreasing.py
+│   ├── minPatches.py
+│   ├── SymmetrixTree.py
+│   └── utility
+├── shell
+│   ├── before_boost_install.sh
+│   ├── before_use_ubuntu.sh
+│   ├── caffe_dependence_package.txt
+│   ├── caffe_install.sh
+│   ├── install_fuchsia_kernal_magenta.sh
+│   ├── INSTALL_MAGENTA.sh
+│   ├── install_software.list
+│   ├── install_software.txt
+│   ├── install_theano.sh
+│   ├── install_wine
+│   ├── magenta.txt
+│   ├── requistionlist.txt
+│   ├── setup.sh
+│   └── Shell programming.pdf
+├── sort_and_search
+│   ├── bubblesort.c
+│   ├── bubblesort_testcase.txt
+│   ├── min_k_num.cpp
+│   ├── nth_element.cpp
+│   ├── odd_even_sort.cpp
+│   └── randomselect.cpp
+├── stl_source
+│   └── stl_test
+└── string
+    ├── reverse_word.cpp
+    └── stack_reverse_word.cpp
+```

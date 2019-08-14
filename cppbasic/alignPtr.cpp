@@ -44,9 +44,8 @@ void* fastAlloc(size_t size)
     return adata;
 }
 
-int main(int argc, char const *argv[])
-{
-    int** a;
+int main(int argc, char const *argv[]) {
+    int** a = 0;
     a = new int*[2];
     for(int i = 0; i < 2; ++i) {
         a[i] = new int[11];

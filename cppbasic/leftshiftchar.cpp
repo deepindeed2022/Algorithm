@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
-typedef void(*tpf)(char[],const int,int);
+typedef void(*tpf)(char[],const int, int);
 void left_shift_onebit(char* s, const int n)
 {
 	char t = s[0];
@@ -20,7 +20,7 @@ void left_shift_onebit(char* s, const int n)
 }
 void left_shift_method_1(char* s, const int n, int m)
 {
-	while(--m)
+	while(m--)
 	{
 		left_shift_onebit(s, n);
 	}
@@ -30,8 +30,8 @@ void test_left_shift(tpf func)
 	char a[] = "abcdfg";
 	int size = strlen(a);
 	tpf f = func;
-	f(a, size, 2)
-	assert(strcmp(a,"abcdfg") == 0);
+	f(a, size, 2);
+	assert(strcmp(a, "cdfgab") == 0);
 
 }
 int main(int argc, char const *argv[])

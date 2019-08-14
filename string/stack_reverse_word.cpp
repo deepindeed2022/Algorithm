@@ -18,7 +18,7 @@ using std::stack;
 #include <assert.h>
 static std::stack<int> s;
 
-char* reverse(char* sourcestat, char* deststat)
+char* stack_reverse(char* sourcestat, char* deststat)
 {
 	// first word preindex is -1
 	s.push(-1);
@@ -50,13 +50,13 @@ int main() {
 	char source[] = "Hello, I am a student!";
 	fprintf(stderr, "sizeof(\"%s\") = %ld\n", source, sizeof(source));
 	char* dest = new char[sizeof(source)+1];
-	fprintf(stderr, "%s\n", reverse(source, dest));
+	fprintf(stderr, "%s\n", stack_reverse(source, dest));
 	delete [] dest;
 
 	char source2[] = "Yeah, your are beautiful!!!";
 	fprintf(stderr, "sizeof(\"%s\") = %ld\n", source2, sizeof(source2));
 	char* dest2 = new char[sizeof(source2)+1];
-	fprintf(stderr, "%s\n", reverse(source2, dest2));
+	fprintf(stderr, "%s\n", stack_reverse(source2, dest2));
 	delete [] dest2;
 	
 	return EXIT_SUCCESS;

@@ -10,17 +10,18 @@ public:
 	{
 		std::cout << "swap()" <<std::endl;
 	};
-	#ifdef __STL_FUNCTION_TMPL_PARTIAL_ORDER
-	template <class T, class Alloc>
+	// #ifdef __STL_FUNCTION_TMPL_PARTIAL_ORDER
 	inline void swap(vector<T, Alloc>& x, vector<T, Alloc>& y)
 	{
+		std::cout << "swap inline" << std::endl;
 		x.swap(y);
 	}
-	#endif
+	// #endif
 };
 int main(int argc, char const *argv[])
 {
 	vector<int> x,y;
 	x.swap(y);
+	x.swap(x, y);
 	return 0;
 }
