@@ -1,0 +1,9 @@
+8
+Orange 4 65
+Apple 1 80
+Apple 2 62
+Apple 4 73
+Orange 1 90
+Apple 3 91
+Orange 3 88
+Orange 5 90
