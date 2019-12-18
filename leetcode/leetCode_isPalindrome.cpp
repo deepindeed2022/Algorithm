@@ -46,5 +46,5 @@ bool isPalindrome(std::string s)
 }
 bool isPalindrome(int num)
 {
-	string a(to_string(num));
+	std::string a(std::to_string(num));
 }

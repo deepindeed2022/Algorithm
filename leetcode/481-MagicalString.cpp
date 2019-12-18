@@ -27,12 +27,16 @@ int magicalString(int n)
 {
     std::string S = "122";
     int i = 2;
-    while (S.size() < n)
+    while (S.size() < n) {
         S += std::string(S[i++] - '0', S.back()^3);
+    	std::cout << S << std::endl;
+    }
+    	
     return count(S.begin(), S.begin() + n, '1');
 }
 int main(int argc, char const *argv[])
 {
-    std::cout << magicalString(1000) << std::endl; 
+    std::cout << magicalString(10) << std::endl; 
+    
     return 0;
 }
